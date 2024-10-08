@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio Formulario</title>
+  </head>
+  <body>
+    <h1>HOJA DE INSCRIPCIÓN</h1>
+    <h1>EN LOS CICLOS FORMATIVOS DE GRADO SUPERIOR</h1>
+    <form action>
+      <fieldset>
+        <legend>Datos Personales</legend>
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" />
+        <label for="apellidos">Apellidos:</label>
+        <input type="text" name="apellidos" />
+        <label for="dni">DNI:</label>
+        <input type="text" name="dni" />
+        <br />
+        <label for="localidadNacimiento">Localidad de Nacimiento:</label>
+        <input type="text" name="localidadNacimiento" />
+        <label for="provincia">Provincia:</label>
+        <select name="provincia">
+          <option value="H">Huelva</option>
+          <option value="M">Madrid</option>
+          <option value="B">Barcelona</option>
+          <option value="SE">Sevilla</option>
+        </select>
+        <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+        <input type="date" name="fechaNacimiento" />
+        <br />
+        <label for="direccion">Dirección:</label>
+        <input type="text" name="direccion" />
+        <label for="cp">Código Postal:</label>
+        <input type="text" name="cp" />
+      </fieldset>
+    </form>
+
+    <form action>
+      <fieldset>
+        <legend>Forma de Acceso</legend>
+        <li type="none">
+          <input type="radio" name="opcionestitulo" />
+          <label for="directo">Directo</label>
+          <ul type="none">
+            <li>
+              <input type="radio" name="opcionestitulodirecto" /><label
+                for="bachillerato"
+                >Bachillerato Log Modalidad
+                <input type="text" name="opcionestitulodirecto"
+              /></label>
+            </li>
+            <li>
+              <input type="radio" name="opcionestitulodirecto" /><label for="exp"
+                >Experimental</label
+              >
+            </li>
+            <li>
+              <input type="radio" name="opcionestitulodirecto" /><label for="cou"
+                >COU Opción<input type="text" name="cou"
+              /></label>
+            </li>
+            <li>
+              <input type="radio" name="opcionestitulodirecto" /><label for="fp2">FP2</label>
+            </li>
+            <li>
+              <input type="radio" name="opcionestitulodirecto" /><label for="otros"
+                >Otros (especifique)<input type="text" name="otros"
+              /></label>
+            </li>
+          </ul>
+        </li>
+        <li type="none">
+          <input type="radio" name="opcionestitulo" /><label for="pLibre"
+            >Prueba Libre</label
+          >
+        </li>
+      </fieldset>
+    </form>
+  </body>
+</html>
