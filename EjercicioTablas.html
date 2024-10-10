@@ -1,41 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        table {
-            border-collapse: collapse;
-        }
-
-        th,
-        td {
-            border: 1px solid black;
-
-            padding: 20px;
-        }
-    </style>
+  
+    <link rel="stylesheet" href="styleTablas.css" />
+    
 </head>
 
 <body>
+    <h1 class="titulo">Caracteristicas</h1>
     <table>
         <tr>
             <td></td>
             <td colspan="3"><img src="ImagenesEjercicios/120_ipod.png" alt="Ipod120"></td>
             <td colspan="2"><img src="ImagenesEjercicios/100_ipod.png" alt="Ipod100"></td>
         </tr>
-        <tr>
-            <td><b>Capacidad</b></td>
-            <td>2GB</td>
-            <td>4GB</td>
-            <td>8GB</td>
-            <td>32GB</td>
-            <td>2GB</td>
+        <tr id="capacidad">
+            <td class="celda1"><b>Capacidad</b></td>
+            <td class="gb">2GB</td>
+            <td class="gb">4GB</td>
+            <td class="gb">8GB</td>
+            <td class="gb">32GB</td>
+            <td class="gb">2GB</td>
         </tr>
         <tr>
-            <td><b>Colores</b></td>
+            <td class="celda1" id="colores"><b>Colores</b></td>
             <td><b>Blanco</b></td>
             <td>
                 <ul type="disc">
@@ -53,12 +45,12 @@
             </td>
         </tr>
         <tr>
-            <td><b>Pantalla</b></td>
+            <td class="celda1"><b>Pantalla</b></td>
             <td colspan="3"><b>3 pulgadas</b></td>
             <td colspan="2"><b>7 pulgadas</b></td>
         </tr>
-        <tr>
-            <td rowspan="2"><b>Tiempo de carga</b></td>
+        <tr id="tiempoCarga">
+            <td rowspan="2" class="celda1"><b>Tiempo de carga</b></td>
             <td rowspan="2" colspan="3"><b>1 hora</b></td>
             <td colspan="2"><b>5 horas</b></td>
         </tr>
