@@ -1,0 +1,84 @@
+/*Usando el selector simple table, pon borde a toda la tabla*/
+table {
+  border-collapse: collapse;
+}
+
+/*Usando los selectores simples td y th, poner borde a todas las casillas*/
+th,
+td {
+  border: 1px solid black;
+}
+
+/* Utilizando únicamente pseudoselectores da color de fondo verde a la primera columna (horas) */
+colgroup col:first-child {
+  background-color: green;
+}
+
+/* La primera casilla (first-child) que está en las filas del thead debe permanecer en BLANCO */
+thead th:first-child {
+  background-color: white;
+}
+
+/* Da color de fondo amarillo a la celda de recreo */
+tbody tr:nth-child(4) th {
+  background-color: yellow;
+}
+tbody tr:nth-child(4) th:hover {
+  font-size: 2em;
+}
+
+/*Ojo el árbol DOM encuentra un SEGUNDO hijo, no encuentra un segundo th*/
+
+/* Cambiar los estado de los enlaces para que:*/
+/*Nunca estén subrayados*/
+a {
+  text-decoration: none;
+}
+
+/*Si están visitados se muestren en rojo*/
+a:visited {
+  color: red;
+}
+
+/*Si no están visitado se muestren en verde */
+a:link {
+  color: green;
+}
+
+/* Utilizando pseudoselectores hacer que cuando pasemos el ratón sobre la columna del viernes
+aumente el tamaño de letra al doble */
+table tr:first-child th:last-child:hover {
+  font-size: 2em;
+}
+
+/* Utilizando Pseudoelementos Haz que la primera letra de los días tenga el doble de tamaño*/
+table tr:first-child th:first-letter{
+
+  font-size: 2em;
+}
+
+/* Añade un borde rojo que esté separado 5 px a los campos obligatorios */
+p input{
+  border: 1px solid red;
+  padding: 5px;
+}
+
+
+/* Añade un * en rojo detrás de las etiquetas del formulario*/
+p label::after{
+  content: "*";
+  color: red;
+}
+
+/*Utilizando pseudoselectores de posición colgroup y col:.... da color azul a las columas de lunes y martes*/
+colgroup col:nth-child(2) {
+  background-color: lightblue;
+}
+/*color verde a las columnas de miércoles y jueves*/
+colgroup col:nth-child(3) {
+  background-color: lightgreen;
+}
+/*color rojo a la columna del viernes*/
+colgroup col:nth-child(4) {
+  background-color: lightcoral;
+}
