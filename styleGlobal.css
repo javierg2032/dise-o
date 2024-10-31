@@ -1,0 +1,201 @@
+/* Ajustar tamaño de todas las cajas */
+* {
+  box-sizing: border-box;
+}
+
+/* Estilo de fuentes en todo el cuerpo de la página: cambria y todo en negrita (bold) y de color azul */
+body {
+  font-family: Cambria, serif;
+  font-weight: bold;
+  color: blue;
+  margin: 0;
+  padding: 0;
+}
+
+/* Barra de navegación, cabecera, contenedor y pie de página, deben de tener un ancho máximo de 1200px. Centrar horizontalmente estos elementos */
+header, nav, main, footer {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Barra de navegación con color de fondo azul, color de letra rosa, tamaño de letra 1.4em, padding 10px. 
+Debe responder a scroll, pero no desaparecer de la página (se queda pegada al extremo superior) */
+nav {
+  background-color: blue;
+  color: pink;
+  font-size: 1.4em;
+  padding: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Elementos de la barra de navegación */
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 20px;
+}
+
+nav ul li a {
+  color: pink;
+  text-decoration: none;
+}
+
+/* Estilos de la cabecera: posicionada y centrada */
+.header-img {
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Banner compra aquí
+ Color de fondo y de letra el mismo que antes, posicionamiento respecto a su padre
+ Separada un 15% de su derecha y un 30% de arriba, con un ancho del 20% */
+.banner {
+  background-color: blue;
+  color: pink;
+  position: absolute;
+  right: 15%;
+  top: 30%;
+  width: 20%;
+  padding: 10px;
+  text-align: center;
+}
+
+/* El enlace del banner debe de cambiar de color cuando pasa el ratón por encima */
+.banner a {
+  color: pink;
+  text-decoration: none;
+}
+
+.banner a:hover {
+  color: white;
+}
+
+/* El elemento principal, está centrado horizontalmente. Tiene un ancho del 80% */
+main {
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* Líneas de separación, después del h1 del main y después del main */
+h1 {
+  border-bottom: 1px solid blue;
+  padding-bottom: 10px;
+}
+
+.separator {
+  border-top: 1px solid blue;
+  margin: 20px 0;
+}
+
+/* Manejo de desbordamiento (el main es más pequeño que su contenido) */
+main {
+  overflow: auto;
+}
+
+/* Colocación de cada uno de los divs de las imágenes de la Federación de Pádel */
+.categorias {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.categoria {
+  text-align: center;
+}
+
+/* Ajuste de ancho a 189px y alto a 265px de las imágenes de las categorías */
+.categoria img {
+  width: 189px;
+  height: 265px;
+}
+
+/* La sección de las palas se ajusta al 70% del ancho de su contenedor padre, centrada horizontalmente */
+.pala {
+  width: 70%;
+  margin: 0 auto;
+  overflow-y: auto;
+}
+
+/* Se deben de colocar los elementos de tal forma que floten con respecto a la imagen
+ La imagen tiene un ancho del 20% y guarda un margen izquierdo del 10% */
+.pala .image img {
+  width: 20%;
+  float: left;
+  margin-left: 10%;
+}
+
+/* Los elementos que hay dentro de la sección, flotan con la imagen
+ Tienen un margen superior del 20% y un ancho del 50%
+ El texto está justificado */
+.pala .element {
+  width: 50%;
+  margin-top: 20%;
+  text-align: justify;
+  float: left;
+  padding: 0 10px;
+}
+
+/* La primera línea de texto en los divs de la clase pala debe de ser:
+ el doble de grande de la fuente, de color rosa, en negrita,
+ borde derecho e inferior de 1px, continuo y de color azul,
+ con un margen derecho de 10px y padding derecho de 10px */
+.pala .element p:first-line {
+  font-size: 2em;
+  color: pink;
+  font-weight: bold;
+  border-right: 1px solid blue;
+  border-bottom: 1px solid blue;
+  margin-right: 10px;
+  padding-right: 10px;
+}
+
+/* La galería de imágenes debe de estar centrada horizontalmente (guarda 20px de margen superior e inferior)
+ Manejo de desbordamiento en altura, con un ancho del 70% */
+.gallery {
+  width: 70%;
+  margin: 20px auto;
+  overflow-y: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+/* Colocación de las imágenes de la galería que deben de tener un ancho cada una del 20% */
+.raquetaGris img {
+  width: 20%;
+  height: auto;
+}
+
+/* Estilos del pie de página, es un elemento NO flotante, manejo de desbordamiento */
+footer {
+  clear: both;
+  overflow: auto;
+  padding: 20px;
+  background-color: blue;
+  color: pink;
+  text-align: center;
+}
+
+/* Estilos del div de la dirección. Definir altura y anchura */
+.address {
+  height: 50px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Colocar y dimensionar adecuadamente el icono de la red social de Instagram */
+.social-icon {
+  width: 30px;
+  height: 30px;
+  margin: 0 5px;
+}
