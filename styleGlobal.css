@@ -1,201 +1,214 @@
-/* Ajustar tamaño de todas las cajas */
+/*Ajustar tamaño de todas las cajas*/
 * {
   box-sizing: border-box;
 }
 
-/* Estilo de fuentes en todo el cuerpo de la página: cambria y todo en negrita (bold) y de color azul */
+/*Estilo de fuentes en todo el cuerpo de la página: cambria y todo en negrita (bold) y de color azul*/
 body {
-  font-family: Cambria, serif;
-  font-weight: bold;
-  color: blue;
-  margin: 0;
-  padding: 0;
+  
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: bolder;
 }
 
-/* Barra de navegación, cabecera, contenedor y pie de página, deben de tener un ancho máximo de 1200px. Centrar horizontalmente estos elementos */
-header, nav, main, footer {
+/*Barra de nevagcion, cabecera, contendor y pie de página, deben de tener un ancho máximo de 12000x.Centrar horizontalmente estos elementos*/
+nav, .contenedor, footer {
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 0px auto;
 }
 
-/* Barra de navegación con color de fondo azul, color de letra rosa, tamaño de letra 1.4em, padding 10px. 
-Debe responder a scroll, pero no desaparecer de la página (se queda pegada al extremo superior) */
+/*Barra de navegacion con color de fondo azul, color de letra rosa
+Tamaño de letra 1.4 em
+Padding 10px
+Debe responder a scroll, pero no desaparecer de la página (se queda pegada al extremo superior)
+*/
 nav {
-  background-color: blue;
-  color: pink;
+  background-color: rgb(23, 31, 110);
+  color: rgb(216, 112, 147);
   font-size: 1.4em;
   padding: 10px;
   position: sticky;
-  top: 0;
-  z-index: 1000;
+  overflow-y: auto;
+  top: 0px;
+  z-index: 100;
 }
-
-/* Elementos de la barra de navegación */
-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  justify-content: center;
+/*Elementos de la barra de navegacion*/
+nav div {
+  float: left;
+  margin-left: 20px;
+  padding: 5px;
 }
-
-nav ul li {
-  margin: 0 20px;
+/*Estilos de la cabecera: posicionada y centrada*/
+header{
+  position: relative;
 }
-
-nav ul li a {
-  color: pink;
-  text-decoration: none;
-}
-
-/* Estilos de la cabecera: posicionada y centrada */
-.header-img {
+/*Imagen*/
+header img {
   width: 100%;
-  display: block;
-  margin: 0 auto;
 }
 
-/* Banner compra aquí
- Color de fondo y de letra el mismo que antes, posicionamiento respecto a su padre
- Separada un 15% de su derecha y un 30% de arriba, con un ancho del 20% */
-.banner {
-  background-color: blue;
-  color: pink;
+/*Banner compra aqui
+Color de fondo y de letra el mismo que antes
+Se debe posicionar respecto a su padre
+Separada un 15% de su derecha y un 30% de arriba
+Con un ancho del 20%
+*/
+#banner {
+  background-color: rgb(23, 31, 110);
+  border-radius: 20px;
+  color: rgb(216, 112, 147);
   position: absolute;
   right: 15%;
+  text-align: center;
   top: 30%;
   width: 20%;
-  padding: 10px;
-  text-align: center;
 }
 
-/* El enlace del banner debe de cambiar de color cuando pasa el ratón por encima */
-.banner a {
-  color: pink;
-  text-decoration: none;
+/*
+El enlace del banner debe de cambiar de color cuando pasar el ratón por encima
+*/
+#banner a{
+  color: rgb(216, 112, 147);
+}
+#banner a:hover {
+  color: aqua;
 }
 
-.banner a:hover {
-  color: white;
-}
-
-/* El elemento principal, está centrado horizontalmente. Tiene un ancho del 80% */
-main {
+/*
+El elemento principal, esta centrado horizontalmente. Tiene un ancho del 80%
+*/
+main{
+  margin: 0px auto;
   width: 80%;
-  margin: 0 auto;
 }
-
-/* Líneas de separación, después del h1 del main y después del main */
-h1 {
-  border-bottom: 1px solid blue;
-  padding-bottom: 10px;
-}
-
-.separator {
-  border-top: 1px solid blue;
-  margin: 20px 0;
-}
-
-/* Manejo de desbordamiento (el main es más pequeño que su contenido) */
-main {
-  overflow: auto;
-}
-
-/* Colocación de cada uno de los divs de las imágenes de la Federación de Pádel */
-.categorias {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-
-.categoria {
+h1{
   text-align: center;
 }
-
-/* Ajuste de ancho a 189px y alto a 265px de las imágenes de las categorías */
-.categoria img {
+/*Kineas de separacion, despues del h1 del main y despues del main*/
+main h1::after, main::after{
+  background-color: rgb(216, 112, 147);
+  display: block;
+  content: "";
+  height: 2px;
+  width: 30%;
+  margin: 0px auto;
+  margin-top: 30px;
+}
+/*Manejo de desbordamiento (el main es mas pequeño que su contenido)*/
+.fip {
+  overflow-y: auto;
+}
+/*Colocación de cada uno de los divs de las imagenes de la Federacion de Padel*/
+.fip .fip-item{
+  float: left;
+  padding: 20px;
+  text-align: center;
+  width: 33%;
+}
+/*Ajuste de ancho a 189px y alto a 265px de las imagenes de los fip-item*/
+.fip .fip-item img{
   width: 189px;
   height: 265px;
 }
 
-/* La sección de las palas se ajusta al 70% del ancho de su contenedor padre, centrada horizontalmente */
+/*
+La seccion de las palas se ajusta al 70% del ancho de su contenedor padre
+centrada horizontalmente
+Se debe manejar el desbordamiento en altura
+*/
 .pala {
-  width: 70%;
-  margin: 0 auto;
+  margin: 30px auto;
   overflow-y: auto;
+  width: 70%;
+
 }
 
-/* Se deben de colocar los elementos de tal forma que floten con respecto a la imagen
- La imagen tiene un ancho del 20% y guarda un margen izquierdo del 10% */
-.pala .image img {
-  width: 20%;
+/*Se deben de colocar los elementos de tal forma que floten con respecto a la imagen
+La imagen tiene un ancho del 20% y guarda un margen izquierdo del 10%
+*/
+.pala img {
   float: left;
   margin-left: 10%;
+  width: 20%;
 }
-
-/* Los elementos que hay dentro de la sección, flotan con la imagen
- Tienen un margen superior del 20% y un ancho del 50%
- El texto está justificado */
-.pala .element {
-  width: 50%;
-  margin-top: 20%;
-  text-align: justify;
+/*Los elementos que hay dentro de la seccion, flotan con la imagen
+Tienen un margen superior del 20% y un ancho del 50%
+El texto está justificado
+*/
+.pala div {
   float: left;
-  padding: 0 10px;
+  margin-top: 20px;
+  text-align: justify;
+  width: 50%;
 }
 
-/* La primera línea de texto en los divs de la clase pala debe de ser:
- el doble de grande de la fuente, de color rosa, en negrita,
- borde derecho e inferior de 1px, continuo y de color azul,
- con un margen derecho de 10px y padding derecho de 10px */
-.pala .element p:first-line {
+/*La primera linea de texto que hay en los div que estan en la clase pala, deben de ser:
+el doble de grandes de la fuente
+del color rosa usado previamente
+en negrita
+recuadrados solamante en el borde derecho e inferior con bordes de 1px, continuo y de color azul,
+ademas deben de guardar un margen derecho (continuacion de línea) de 10px y padding derecho de 10px*/
+.pala div::first-letter{
+  border-right: 1px solid rgb(23, 31, 110);
+  border-bottom: 1px solid rgb(23, 31, 110);
+  color: rgb(216, 112, 147);
   font-size: 2em;
-  color: pink;
-  font-weight: bold;
-  border-right: 1px solid blue;
-  border-bottom: 1px solid blue;
+  font-weight: bolder;
   margin-right: 10px;
   padding-right: 10px;
+
 }
 
-/* La galería de imágenes debe de estar centrada horizontalmente (guarda 20px de margen superior e inferior)
- Manejo de desbordamiento en altura, con un ancho del 70% */
-.gallery {
-  width: 70%;
+/*La galeria de imagenes debe de estar centrada horizontalmente (guarda 20px de margen superior e inferior)
+Manejo de desbordamiento en altura
+Tiene un ancho del 70%
+*/
+.imagenes {
+  clear: both;
   margin: 20px auto;
   overflow-y: auto;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  justify-content: center;
+  width: 70%;
 }
-
-/* Colocación de las imágenes de la galería que deben de tener un ancho cada una del 20% */
-.raquetaGris img {
+/*Colocacion de las imagenes de la galeria que deben de tener un ancho cada una del 20%*/
+.imagenes img {
+  display: inline-block;
+  
   width: 20%;
-  height: auto;
 }
 
-/* Estilos del pie de página, es un elemento NO flotante, manejo de desbordamiento */
-footer {
+/*Estilos del pie de pagina, es un elemento NO flotante
+Manejo de desbordamiento*/
+
+footer{
+  background-color: rgb(23, 31, 110);
+  color: rgb(216, 112, 147);
   clear: both;
-  overflow: auto;
-  padding: 20px;
-  background-color: blue;
-  color: pink;
-  text-align: center;
+  font-weight: bold;
+  font-size: 0.8em;
+  overflow-y: auto;
 }
 
-/* Estilos del div de la dirección. Definir altura y anchura */
-.address {
-  height: 50px;
-  width: 100%;
+/*Estilos del div de la direccion. Definir altura y anchura*/
+footer .direccion {
+  background-color: rgb(23, 31, 110);
+  color: rgb(216, 112, 147);
+  float: left;
   text-align: center;
+  width: 20%;
+  height: 100%;
+  
+
 }
 
-/* Colocar y dimensionar adecuadamente el icono de la red social de Instagram */
-.social-icon {
-  width: 30px;
-  height: 30px;
-  margin: 0 5px;
+/*Colocar y dimensionar adecuadamente el icono de la red social de instagram*/
+footer .redes {
+  float: right;
+  background-color: rgb(23, 31, 110);
+  color: rgb(216, 112, 147);
+  width: 80%;
+}
+
+.redes img {
+  float: right;
+  width: 2%;
+  height: 2%;
 }
