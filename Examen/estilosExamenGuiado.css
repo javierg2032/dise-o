@@ -40,7 +40,7 @@ Si hay o pudiera existir solapamiento con otros elementos de la página, la barr
   background-color: #1a1a1a;
   color: white;
   padding: 10px;
-  position: fixed;
+  position: sticky;
   top: 0;
   width: 100%;
   z-index: 1000;
@@ -78,7 +78,7 @@ Decoración de texto: alienado al centro, negrita y de color blanco
 */
 #banner {
   position: absolute;
-  top: 85px; /*Lo he cambiado de 120 a 85 para que se ajustase mas a la imagen del resultado*/
+  top: 120px;
   left: 40%;
   width: 20%;
   background-color: #4a4a4a;
@@ -90,7 +90,7 @@ Decoración de texto: alienado al centro, negrita y de color blanco
 }
 
 /*j) Todas las secciones que están dentro de la sección principal guardan un margen inferior con el resto de 30px*/
-.main > section {
+.main section {
   margin-bottom: 30px;
 }
 

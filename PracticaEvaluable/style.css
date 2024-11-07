@@ -2,14 +2,12 @@ html,
 body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
   width: 100%;
-  overflow-x: hidden;
 }
 
 body {
-  background-color: #f8f8f8;
-  cursor: url("./Imagenes/D20MouseClaro.svg"), auto;
+  background-color: #1f1f1f;
+  cursor: url("./Imagenes/D20Mouse.svg"), auto;
   font-family: "Jacques Francois", serif;
   font-size: larger;
   text-align: center;
@@ -22,24 +20,24 @@ body {
 }
 
 .header {
-  position: fixed;
+  position: sticky;
   top: 0;
-  left: 0;
   z-index: 1000;
-  background-color: #f8f8f8;
+  background-color: #1f1f1f;
   padding: 10px 20px;
-  color: #d4ba83;
+  color: #db292f;
   width: 100%;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+  text-align: left;
   text-align: center;
-  display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .logo-container {
-  display: inline-flex;
+  display:inline-flex;
   align-items: center;
+  vertical-align: middle;
 }
 
 .logo {
@@ -48,7 +46,7 @@ body {
 }
 
 .header-title {
-  color: #d4ba83;
+  color: #db292f;
   margin-left: 10px;
   font-size: 2.5em;
 }
@@ -77,7 +75,7 @@ h2 {
 }
 
 a {
-  color: #d4ba83;
+  color: #db292f;
 }
 
 p {
@@ -100,12 +98,12 @@ td {
 }
 
 .index-section {
-  background-color: #d4ba83;
+  background-color: #db292f;
   padding: 40px;
   margin: 10px auto;
-  margin-top: 135px;
+  margin-top: 10px;
   border-radius: 10px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.8);
   width: 90%;
 }
 
@@ -148,21 +146,22 @@ td {
   transition: transform 0.8s ease-in-out, clip-path 0.8s ease-in-out;
   margin-bottom: 7.25px;
   margin-top: 7.25px;
-  filter: brightness(0.95);
   display: inline-block;
+  filter: drop-shadow(4px 10px rgba(0, 0, 0, 0.5));
 }
 
 .container img:hover {
   clip-path: inset(0);
   transform: scale(1.25);
   filter: brightness(1);
+  filter: drop-shadow(4px 10px rgba(0, 0, 0, 0.4));
 }
 
 .footer {
   text-align: center;
-  background-color: #f8f8f8;
+  background-color: #1f1f1f;
   padding: 10px 20px;
-  color: #d4ba83;
+  color: #db292f;
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
