@@ -32,28 +32,39 @@ body {
 }
 
 .logo-container {
-  float: left; /* Alinea el contenedor del logo a la izquierda */
-  display: inline-flex;
-  align-items: center;
+  float: left;
+  display: inline-block;
   vertical-align: middle;
 }
 
 .logo {
+  display: inline-block;
+  vertical-align: middle;
   width: 70px;
   height: auto;
 }
 
 .header-title {
+  display: inline-block;
+  vertical-align: middle;
   color: #db292f;
   margin-left: 10px;
   font-size: 2em;
-  line-height: 50px; /* Asegura que el título esté centrado verticalmente */
+  line-height: 50px;
+}
+
+.mode {
+  float: right;
+  padding-top: 20px;
+  padding-bottom: 15px;
+  margin-right: 20px;
 }
 
 .user {
-  float: right; /* Si quieres alinear algo a la derecha, como el usuario */
+  float: right;
+  padding-top: 20px;
+  padding-bottom: 15px;
 }
-
 
 .logoclase {
   width: 100px;
@@ -169,4 +180,77 @@ td {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
+}
+
+/* Estilos para el modo claro */
+body.light-mode {
+  background-color: #f8f8f8;
+  color: #1f1f1f;
+}
+
+body.light-mode .header,
+body.light-mode .footer {
+  background-color: #f8f8f8;
+  color: #d4ba83;
+}
+
+body.light-mode .header-title {
+  color: #d4ba83;
+}
+
+body.light-mode a {
+  color: #db292f;
+}
+
+body.light-mode .index-section {
+  background-color: #d4ba83;
+  color: #1f1f1f;
+}
+
+body.light-mode .container img {
+  filter: drop-shadow(4px 10px rgba(0, 0, 0, 0.4));
+}
+
+/* Estilos predeterminados (modo oscuro) */
+body {
+  background-color: #1f1f1f;
+  color: #db292f;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Estilos para modo claro */
+body.light-mode {
+  background-color: #f8f8f8;
+  color: #d4ba83;
+}
+
+/* Colores del SVG en modo oscuro */
+#mode-icon {
+  stroke: #db292f;
+  transition: stroke 0.3s;
+}
+
+/* Colores del SVG en modo claro */
+body.light-mode #mode-icon {
+  stroke: #d4ba83;
+}
+
+/* Colores del SVG del usuario en modo oscuro */
+#user-icon svg {
+  stroke: #db292f;
+  transition: stroke 0.3s;
+}
+
+/* Colores del SVG del usuario en modo claro */
+body.light-mode #user-icon svg {
+  stroke: #d4ba83;
+}
+
+/* Cambio de logo y cursor en modo claro */
+body.light-mode .logo {
+  content: url("./Imagenes/D20Claro.svg");
+}
+
+body.light-mode {
+  cursor: url("./Imagenes/D20MouseClaro.svg"), auto;
 }
