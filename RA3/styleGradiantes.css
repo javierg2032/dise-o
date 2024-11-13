@@ -1,0 +1,66 @@
+.lineal div {
+    padding: 40px;
+  }
+  
+  .lineal div:nth-child(1) {
+    background: linear-gradient(
+      90deg,
+      rgba(176, 174, 238, 1) 0%,
+      rgba(29, 30, 31, 1)
+    );
+  }
+  
+  .lineal div:nth-child(2) {
+    background: linear-gradient(
+      to right,
+      black,
+      brown,
+      red,
+      orange,
+      yellow,
+      green,
+      blue,
+      purple,
+      violet,
+      pink,
+      white,
+      grey
+    );
+  }
+  
+  .lineal div:nth-child(3) {
+    background: linear-gradient(to top, #000, #ccc);
+  }
+  
+  .lineal div:nth-child(4) {
+    background: linear-gradient(to right, red 300px, brown 400px, orange 700px);
+  }
+  
+  .radial div:nth-child(1) {
+    background: radial-gradient(
+      ellipse,
+      rgba(176, 174, 238, 1) 0%,
+      rgba(29, 30, 31, 1)
+    );
+  }
+  
+  .radial div:nth-child(2) {
+    background: radial-gradient(circle, red, brown, orange, yellow, blue);
+  }
+  
+  .radial div:nth-child(3) {
+    background: radial-gradient(circle, red 300px, brown 400px, orange 700px);
+  }
+  
+  .radial div:nth-child(4) {
+    background: radial-gradient(#000, #ccc);
+  }
+  
+  .radial div:nth-child(5) {
+    background: radial-gradient(farthest-side, #ff5733, #ffca3a);
+  }
+  
+  .radial div {
+    padding: 40px;
+  }
+  
