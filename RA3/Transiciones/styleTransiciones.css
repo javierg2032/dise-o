@@ -1,0 +1,90 @@
+/* Estilo del Menú */
+.menu {
+  display: flex;
+  background-color: black;
+  justify-content: center;
+  padding: 1em 0;
+}
+
+.menu li {
+  list-style: none;
+  position: relative;
+  margin: 0 20px;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  position: relative;
+  padding: 10px 0;
+}
+
+.menu li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  width: 0;
+  background-color: red;
+  transition: width 0.3s ease;
+}
+
+.menu li:hover a::after {
+  width: 100%;
+}
+
+/* Estilo del Contenedor Principal */
+.contenedor {
+  display: grid;
+  grid-template-columns: repeat(5, 180px);
+  gap: 20px;
+  justify-content: center;
+  margin-top: 50px;
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+
+.item {
+  width: 180px;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.contenedor:hover {
+  background-color: #333;
+  font-size: 22px;
+  color: yellow;
+  line-height: 2em;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  opacity: 0.8;
+}
+
+.contenedor:hover .item {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+
+/* Opciones de transiciones adicionales */
+.contenedor:hover {
+  background-color: #000;
+  font-family: Arial, sans-serif;
+}
+
+.item:hover {
+  font-size: 25px;
+  transform: rotate(5deg);
+}
+
+.contenedor {
+  border: 5px solid #ccc;
+  border-radius: 10px;
+}
