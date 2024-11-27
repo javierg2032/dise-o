@@ -1,0 +1,94 @@
+body {
+  background-color: rgb(255, 255, 255);
+  box-sizing: border-box;
+}
+
+.pelota {
+  display: inline-block;
+  margin: 5% 5%;
+  width: 100px;
+  height: 100px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  animation: botar 1.5s ease-in-out infinite;
+}
+
+.logo {
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQV0lB8J7SeqO1Pgz14ZbiQpCc1NZocIZJWbg&s");
+  width: 100px;
+  height: 100px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: rotar 5s linear infinite; /* Rotación indefinida */
+  margin: 5% 5%;
+}
+
+#twitch {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAtFBMVEWpQ/8AAAD///+sRP9kM4wPBRinSfGSkpKMjIyqQv9ISEijT+jMzMxDQ0NoaGg+Pj6PRMp6PLGpqam/v78AAgAgICA7Ozv5+fmvr6/FxcUtGUUbGxuYTNqtP/+BRbhSLXhjL5IxF0ejTesmJiYvGUM0HEukTvA8HVU6HVirSfhCIGAIAA9hYWExMTGfn58lET4hETgbCy0ZDSvq6uqPS8wOAyCKRcB6QKxnOYtOLXBWLXqcQeYU2JtdAAAEdklEQVR4nO2dDVPaMBjH22XiIiqwdSKTgtMNx9yLL6iTff/vtSRttzZ9k5IsD7n/7069C70ev3uePEkjCUEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQBZe+GPonszo7baDyTdj/P0wC/fsCs/9NnhPzozesTvivTAeMxu4VkvhAed8ev7aOOc9GlnKZT71P4YW6BMwZCJ8wtGOYNh3rRckAWTxxQcrggQMmaqf1gQJGMoeyO0J0jCMWd+aoFNDOVKpIqqKTOShIU/mG0LQXgQdZ6mabzApmAvgwb4RLmkY8ooI7r8ywgEFQzlKcH7xuZhVb/wy5EH/k1Zj/DBk2VNSrEfQF8PMs0LQH0M5247FOFgaBn0x5HK8r4igP4aSRZWgL4ay0CyuKmdqnhjK58Grqgh6YygG+hpBXwzjiy91DxOeGC6/1kTQG8PFteeGbLm3ueE440Xtrg17mxuOw8v3krNj7YXBWdJ+tOuGr7ILdMOTtH3greEgbfc3hjCEIQxhCEMYwhCGMIQhDGEIQxjCEIYwhCEMuxl+09q/p+0nO2/4423CO639NG0/3XnDzYAhDGEIQxhuzST03PAw9Nxwkrufm11Blg3zgl4a5gSj8KebvWtWDQ/zd7uZutm6ZtOwKNhXH2T1yrDQB2+mrnY62zMsCva5q+2V1gy1Psg4c7SV25bhP8EoKzKO9nJbMtT6oJRzlaZ2DPUik+078sawIHg7dbsP34ZhocgIwdjpcREWDAsRvEuqqEPFJsNu+w/1FOXuikyr4fFhicl9Ued+ol9xqgky16eaNBlWUVwEHg8aL74dZgm6q4bjk9rr5BaOuxWF00y2MWwQlNwNRRV1zxaGLSn6MMx2+e+qYaNglAm6z9POhi0p+rBiTO1OdU5Xw5YI7g3dBy+lo2FjFY1kBDmVk726GbYUmesVi3c7hm2Cjywg0gmDbobNRSYKHxml0+c6GDZHMApnSQRdm2VsbtgyTIgIEgpg0MGwpQ+Gj0sKU7UcGxseNb8+k1WUUgg3Nmxh5vyBt4RZQ4KCZg1nLM1QSo4mDWfEqmiCQcMRtSqaYM5Q9kFKZwVnGDOkWGQUpgzJCgbBxoblg1CiSAmSq6IJBmIolEdkTkGuoFd/tskLQxiGTySWDetgw1p+VSo+r7TLVnLpnthkNA+XpyPLHw3xwqhKcN6LC9cl57dzAsuGddQPYZWGQlC/LLBySL11eLXhvFcVrd3TSygZRuF8QWaR0ATlGIoIUlqB2ZqSoRAkOfPsTNEwCp9lkXH08Ts7aDF87nGSz39bUDScL72SU+QMI9UHfUpQRT6GSRX1qswEOUMRwWWcHhjtFZlhpKZqnPLkuiN/Y7gWKar+Ke/6HZkmMyxPtn0hNRTDBPOuiiZIQ1VkGPOuiiaoGK6Xzj6Cbh9puO7FjNT/rM0hVzGehCDzMz8DtTbBRuuexykq+b307mkih/oGPUpf6WeBbJHe3xhyG1/0CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD+C38A/fF6+HOqW2wAAAAASUVORK5CYII=");
+}
+#instagram {
+  background-image: url("https://cdn2.iconfinder.com/data/icons/2018-social-media-app-logos/1000/2018_social_media_popular_app_logo_instagram-512.png");
+}
+#twitter {
+  background-image: url("https://cdn.prod.website-files.com/5d66bdc65e51a0d114d15891/64cebdd90aef8ef8c749e848_X-EverythingApp-Logo-Twitter.jpg");
+}
+#tiktok {
+  background-image: url("https://cdn.pixabay.com/photo/2021/06/15/12/28/tiktok-6338429_1280.png");
+}
+
+.semicirculo {
+  width: 100px;
+  height: 100px;
+  border: 10px solid transparent;
+  border-radius: 50%;
+  animation: rotate 0.5s linear infinite, changeColor 3s linear infinite;
+  margin: 5% 5%;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes changeColor {
+  0% {
+    border-top: 10px solid #3498db; /* Azul */
+  }
+  25% {
+    border-top: 10px solid #e74c3c; /* Rojo */
+  }
+  50% {
+    border-top: 10px solid #f39c12; /* Naranja */
+  }
+  75% {
+    border-top: 10px solid #2ecc71; /* Verde */
+  }
+  100% {
+    border-top: 10px solid #3498db; /* Azul */
+  }
+}
+
+@keyframes rotar {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes botar {
+  0%,
+  100% {
+    transform: translateY(0); /* Posición inicial y final */
+  }
+  50% {
+    transform: translateY(200px); /* La pelota desciende */
+  }
+}
