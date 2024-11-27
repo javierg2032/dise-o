@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Ejercicio Each JQuery</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="../Librerias JQuery/jquery-3.7.1.js"></script>
+  </head>
+
+  <body>
+    <table>
+      <thead>
+        <tr>
+          <th>Alumno</th>
+          <th>Examen 1</th>
+          <th>Examen 2</th>
+          <th>Examen 3</th>
+          <th>Nota evaluación</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Pepe Pérez</td>
+          <td>5</td>
+          <td>10</td>
+          <td>3</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Ana Ramírez</td>
+          <td>6</td>
+          <td>3</td>
+          <td>5</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Rosa Torres</td>
+          <td>9</td>
+          <td>3</td>
+          <td>9</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Sara Gallardo</td>
+          <td>8</td>
+          <td>8</td>
+          <td>6</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <script>
+      $(document).ready(function () {
+        $("tbody tr").each(function () {
+          var examen1 = parseFloat($(this).find("td").eq(1).text());
+          var examen2 = parseFloat($(this).find("td").eq(2).text());
+          var examen3 = parseFloat($(this).find("td").eq(2).text());
+
+          var media = (examen1 + examen2 + examen3) / 3;
+
+          $(this).find("td").eq(4).text(media.toFixed(2));
+
+          if (media < 5) {
+            $(this).find("td").css("color", "red");
+          }else{
+            $(this).find("td").css("color", "green");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
