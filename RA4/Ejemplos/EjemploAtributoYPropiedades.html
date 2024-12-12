@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejemplo JQuery</title>
+    <script src="../Librerias JQuery/jquery-3.7.1.js"></script>
+  </head>
+  <body>
+    <input id="ej" type="text" value="valor1" />
+
+    <script>
+      $(document).ready(function () {
+        console.log($("#ej").attr("value"));
+        console.log($("#ej").prop("value"));
+
+        console.log($("#ej").attr("disabled"));
+        console.log($("#ej").prop("disabled"));
+
+        $("#ej").val("valor2");
+        console.log($("#ej").attr("value"));
+        console.log($("#ej").prop("value"));
+      });
+    </script>
+  </body>
+</html>

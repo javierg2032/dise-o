@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejemplo JQuery</title>
+    <script src="../Librerias JQuery/jquery-3.7.1.js"></script>
+  </head>
+  <body>
+    <article>Articulo1</article>
+    <article>Articulo2</article>
+    <article>Articulo3</article>
+    <script>
+      $(document).ready(function () {
+        console.log($("article").html());
+        console.log($("article").html("hola"));
+
+        $("article").each(function (index, elemento) {
+          console.log($(this).html());
+        });
+      });
+    </script>
+  </body>
+</html>
