@@ -1,0 +1,44 @@
+<!--Se pide, utilizando propiedades y funciones vistas en CSS, 
+generar una animacion para que el cuadrado, dividida en tres tramos (25%,50% y 100%):
+    - Cambie de color a amarillo
+    - Luego cambie de color a azul. Se mueva de forma horizontal 300px hacia la derecha
+    - Luego cambie de color a rojo. Regrese a su posición inicial
+La animacion debe durar 4 segundos y repetirse indefinidamente.
+Se debe de indicar el codigo añadido al html y se deben añadir breves comentarios-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Javier Galán Cortés" />
+    <title>Ejercicio3_ExamenRA3</title>
+
+    <style>
+      .cuadrado {
+        width: 100px;
+        height: 100px;
+        background-color: #ff0000;
+        /*CÓDIGO AÑADIDO:*/
+        animation: cambioColorMovimiento 4s infinite; /*Llama a la animación y le asigna una duración*/
+      }
+
+      @keyframes cambioColorMovimiento {
+        25% {
+          background-color: #fffb00; /*Cambia de color a amarillo*/
+        }
+        50% {
+          background-color: #007bff; /*Cambia de color a azul*/
+          transform: translateX(300px); /*Se desplaza 300px hacua la derecha*/
+        }
+        100% {
+          background-color: #ff0000; /*Cambia de color a rojo*/
+          transform: translateX(0); /*Vuelve a la posición inicial*/
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="cuadrado"></div>
+  </body>
+</html>

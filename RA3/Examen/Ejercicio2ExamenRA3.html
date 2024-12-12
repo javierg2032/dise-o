@@ -1,0 +1,46 @@
+<!-- Se pide, utilizando las propiedades y funciones vistas en CSS, generar una
+ transición que, cuando el usuario pase el ratón sobre el botón:
+    - Aumente su tamaño en un 10%, es decir, escalado al 1.1
+    - Cambie de color. El nuevo color es un degradado de izquierda a derecha, del color azul 
+    al color verde
+    - La transición debe durar 0.5 segundos
+Se debe de indicar el codigo añadido al html y se deben añadir breves comentarios-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Javier Galán Cortés" />
+    <title>Ejercicio2_ExamenRA3</title>
+
+    <style>
+      .btn {
+        width: 200px;
+        height: 50px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+      }
+
+      /*CÓDIGO AÑADIDO:*/
+      .btn:hover {
+        /*Al poner el ratón sobre la clase btn*/
+        transform: scale(1.1); /*Aumenta su tamaño en un 10%*/
+        background: linear-gradient(
+          to right,
+          #007bff,
+          #00ff2a
+        ); /*Degradado de izquierda a derecha de azul a verde*/
+        transition-duration: 0.5s; /*La duración es de 0.5 segundos*/
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <button class="btn">Pulsar Aqui</button>
+    </div>
+  </body>
+</html>
