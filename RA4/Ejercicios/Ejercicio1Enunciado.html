@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lista de Tareas</title>
+    <script src="../Librerias JQuery/jquery-3.7.1.js"></script>
+    <style>
+      .completada {
+        text-decoration: line-through;
+        color: gray;
+      }
+    </style>
+  </head>
+  <body>
+    <ul id="tareas">
+      <li>Tarea 1</li>
+      <li>Tarea 2</li>
+      <li>Tarea 3</li>
+      <li>Tarea 4</li>
+      <li>Tarea 5</li>
+    </ul>
+
+    <button id="eliminar">Eliminar</button>
+
+    <script>
+      $(document).ready(function () {
+        // Alternar clase completada
+        $("#tareas").on("click", "li", function () {
+          $(this).toggleClass("completada");
+        });
+
+        // Eliminar tareas completadas
+        $("#eliminar").click(function () {
+          $(".completada").remove();
+        });
+      });
+    </script>
+  </body>
+</html>

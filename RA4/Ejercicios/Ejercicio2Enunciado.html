@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wrap y Unwrap</title>
+    <script src="../Librerias JQuery/jquery-3.7.1.js"></script>
+    <style>
+      .article_outer {
+        border: 1px solid blue;
+        padding: 10px;
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <article>Articulo 1</article>
+    </div>
+    <div>
+      <article>Articulo 2</article>
+    </div>
+    <div>
+      <article>Articulo 3</article>
+    </div>
+
+    <button id="wrap">Envolver</button>
+    <button id="unwrap">Desenvolver</button>
+
+    <script>
+      $(document).ready(function () {
+        // Envolver el primer artículo en un div con la clase 'article_outer'
+        $("#wrap").click(function () {
+          $("article").wrap('<div class="article_outer"></div>');
+        });
+
+        // Eliminar el envoltorio del primer artículo
+        $("#unwrap").click(function () {
+          $("article:first").unwrap();
+        });
+      });
+    </script>
+  </body>
+</html>
