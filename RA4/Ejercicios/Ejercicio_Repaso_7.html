@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 7 Repaso</title>
+    <style>
+      .form-container {
+        border: 1px solid black;
+        padding: 10px;
+        width: 300px;
+      }
+
+      .result-container {
+        border: 1px solid blue;
+        padding: 10px;
+        width: 300px;
+        margin-top: 20px;
+        color: blue;
+      }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  </head>
+  <body>
+    <p>
+      Indica cuál de estos espacios del Instituto has visitado durante este
+      curso
+    </p>
+    <div class="form-container">
+      <form>
+        <label>
+          <input type="checkbox" value="La cafetería" class="espacio" />
+          La cafetería </label
+        ><br />
+        <label>
+          <input type="checkbox" value="Aula" class="espacio" />
+          Aula </label
+        ><br />
+        <label>
+          <input type="checkbox" value="Biblioteca" class="espacio" />
+          Biblioteca </label
+        ><br />
+        <label>
+          <input type="checkbox" value="Patio" class="espacio" />
+          Patio </label
+        ><br />
+        <label>
+          <input type="checkbox" value="Jefatura de estudios" class="espacio" />
+          Jefatura de estudios </label
+        ><br />
+        <label>
+          <input type="checkbox" value="Secretaría" class="espacio" />
+          Secretaría
+        </label>
+      </form>
+    </div>
+
+    <div class="result-container">
+      <p>Usted ha visitado:</p>
+      <ol id="lista-espacios"></ol>
+    </div>
+    <script>
+      $(document).ready(function () {
+        $(".espacio").change(function () {
+          const value = $(this).val(); // Obtén el valor del checkbox
+          const lista = $("#lista-espacios"); // Selecciona la lista
+
+          if ($(this).is(":checked")) {
+            // Si se selecciona, añade el elemento a la lista
+            lista.append('<li data-value="' + value + '">' + value + "</li>");
+          } else {
+            // Si se deselecciona, elimina el elemento correspondiente
+            lista.find('li[data-value="' + value + '"]').remove();
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

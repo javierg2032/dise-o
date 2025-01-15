@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 6 Repaso</title>
+    <script src="../Librerias JQuery/jquery-3.7.1.js"></script>
+  </head>
+  <body>
+    <p>
+      Cuando se haga click en los botones se realizarán asignaciones o
+      eliminaciones de estilos en este parrafo
+    </p>
+    <button id="addRojo">Asignar color rojo</button>
+    <button id="delRojo">Eliminar estilo color rojo</button>
+    <script>
+      $(document).ready(function () {
+        // Botón para asignar color rojo
+        $("#addRojo").click(function () {
+          const colorActual = $("p").css("color");
+          if (colorActual === "rgb(255, 0, 0)") {
+            // Verificar si ya es rojo
+            alert("El texto es rojo");
+          } else {
+            $("p").css("color", "red");
+          }
+        });
+
+        // Botón para eliminar color rojo
+        $("#delRojo").click(function () {
+          const colorActual = $("p").css("color");
+          if (colorActual === "rgb(255, 0, 0)") {
+            // Verificar si es rojo
+            $("p").css("color", "");
+          } else {
+            alert("El texto no es rojo");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

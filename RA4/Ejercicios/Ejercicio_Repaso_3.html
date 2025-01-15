@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 3 Repaso</title>
+    <script src="../Librerias JQuery/jquery-3.7.1.js"></script>
+  </head>
+  <body>
+    <head>
+      <h1>Encabezado</h1>
+    </head>
+    <main>
+      <p>Párrafo 1</p>
+      <p>Párrafo 2</p>
+      <a href="https://twitch.tv/nulcrum" id="ventanaNueva" target="_blank"
+        >Enlace 1: ventana nueva</a
+      ><br />
+      <a href="https://twitch.tv/nulcrum" id="mismaVentana" target="_self"
+        >Enlace 2: misma ventana</a
+      ><br />
+      <button id="ocultarHeadP1">Ocultar Párrafo 1 y Encabezado</button>
+      <button id="ocultarP1">Ocultar Párrafo 1</button>
+      <button id="ocultarA">Ocultar Enlaces</button>
+      <button id="ocultarAVentanaNueva">Ocultar Enlaces Ventana Nueva</button>
+    </main>
+    <script>
+      $(document).ready(function () {
+        // Ocultar el encabezado y el párrafo 1
+        $("#ocultarHeadP1").click(function () {
+          $("h1, p:nth-child(1)").css("opacity", "0"); // Ocultar encabezado y párrafo 1
+          $(this).css("opacity", "0"); // Ocultar el botón pulsado
+          $("#ocultarP1").css("opacity", "0"); // Ocultar el botón "Ocultar Párrafo 1"
+        });
+
+        // Ocultar solo el párrafo 1
+        $("#ocultarP1").click(function () {
+          $("p:nth-child(1)").css("opacity", "0"); // Ocultar solo el párrafo 1
+          $(this).css("opacity", "0"); // Ocultar el botón pulsado
+        });
+
+        // Ocultar los enlaces
+        $("#ocultarA").click(function () {
+          $("a").css("opacity", "0"); // Ocultar todos los enlaces
+          $(this).css("opacity", "0"); // Ocultar el botón pulsado
+          $("#ocultarAVentanaNueva").css("opacity", "0");
+        });
+
+        // Ocultar solo el enlace que se abre en una ventana nueva
+        $("#ocultarAVentanaNueva").click(function () {
+          $("#ventanaNueva").css("opacity", "0"); // Ocultar solo el enlace que se abre en ventana nueva
+          $(this).css("opacity", "0"); // Ocultar el botón pulsado
+        });
+      });
+    </script>
+  </body>
+</html>
