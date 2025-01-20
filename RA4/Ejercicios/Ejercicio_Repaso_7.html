@@ -33,23 +33,23 @@
           La cafetería </label
         ><br />
         <label>
-          <input type="checkbox" value="Aula" class="espacio" />
+          <input type="checkbox" value="Aula" />
           Aula </label
         ><br />
         <label>
-          <input type="checkbox" value="Biblioteca" class="espacio" />
+          <input type="checkbox" value="Biblioteca" />
           Biblioteca </label
         ><br />
         <label>
-          <input type="checkbox" value="Patio" class="espacio" />
+          <input type="checkbox" value="Patio" />
           Patio </label
         ><br />
         <label>
-          <input type="checkbox" value="Jefatura de estudios" class="espacio" />
+          <input type="checkbox" value="Jefatura de estudios" />
           Jefatura de estudios </label
         ><br />
         <label>
-          <input type="checkbox" value="Secretaría" class="espacio" />
+          <input type="checkbox" value="Secretaría" />
           Secretaría
         </label>
       </form>
@@ -57,20 +57,26 @@
 
     <div class="result-container">
       <p>Usted ha visitado:</p>
-      <ol id="lista-espacios"></ol>
+      <ol id="listaVisitados"></ol>
     </div>
     <script>
       $(document).ready(function () {
-        $(".espacio").change(function () {
-          const value = $(this).val(); // Obtén el valor del checkbox
-          const lista = $("#lista-espacios"); // Selecciona la lista
+        $(":checkbox").change(function () {
+          //.on("change", function()) hace lo mismo en versiones más modernas de jQuery
+          const value = $(this).val();
+          const lista = $("#listaVisitados");
+
+
 
           if ($(this).is(":checked")) {
-            // Si se selecciona, añade el elemento a la lista
-            lista.append('<li data-value="' + value + '">' + value + "</li>");
+            lista.append("<li>" + value + "</li>");
           } else {
-            // Si se deselecciona, elimina el elemento correspondiente
-            lista.find('li[data-value="' + value + '"]').remove();
+            lista
+              .find("li")
+              .filter(function () {
+                return $(this).text() === value;
+              })
+              .remove();
           }
         });
       });

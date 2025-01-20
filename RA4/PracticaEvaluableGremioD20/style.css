@@ -1,0 +1,136 @@
+/*Estilos generales*/
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+body {
+  background-color: #f8f8f8;
+  cursor: url("Imagenes/D20MouseClaro.png"), auto;
+  font-family: "Jacques Francoid", serif;
+  font-size: larger;
+  text-align: center;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #f8f8f8;
+  padding: 10px 20px;
+  color: #d4ba83;
+  width: 100%;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+.header-title {
+  display: inline-block;
+  vertical-align: middle;
+  color: #d4ba83;
+  margin-left: 10px;
+  font-size: 2em;
+  line-height: 50px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.logo-container {
+  float: inline-start;
+  vertical-align: middle;
+}
+
+.logo-container a {
+  text-decoration: none;
+}
+
+.logo {
+  display: inline-block;
+  vertical-align: middle;
+  width: 70px;
+  height: auto;
+}
+
+.mode {
+  float: right;
+  padding-top: 20px;
+  padding-bottom: 15px;
+  margin-right: 20px;
+}
+
+.user {
+  float: right;
+  padding-top: 20px;
+  padding-bottom: 15px;
+}
+
+h1 {
+  font-family: "Jacques Francois", serif;
+  margin: 0;
+  color: #f8f8f8;
+}
+
+main {
+  background-color: #d4ba83;
+  padding: 40px;
+  margin: 10px auto;
+  margin-top: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.8);
+  width: 90%;
+}
+
+a {
+  color: #d4ba83;
+}
+
+/*Formulario Inventario*/
+
+.inventario input,
+.inventario select,
+.inventario button {
+  padding: auto 3%;
+  margin-bottom: 3%;
+  border: 1px solid #bdbdbd;
+  border-radius: 5px;
+  background-color: #f8f8f8;
+  color: #1f1f1f;
+}
+
+.div-form {
+  background-color: #f8f8f8;
+  color: #d4ba83;
+  border-radius: 5px;
+  margin: 3% auto;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  display:flexbox
+}
+
+.tabla-inventario {
+  width: 100%;
+  border-style: hidden;
+  border: 5px solid #f8f8f8;
+  text-align: center;
+  border-radius: 5px;
+}
+
+td {
+  border: 1px solid #d4ba83;
+  background-color: #f8f8f8;
+  padding: 20px;
+}
+
+thead {
+  font-weight: bold;
+}

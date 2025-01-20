@@ -22,7 +22,6 @@
       .reset-button {
         margin-top: 10px;
         display: block;
-
         border: none;
         padding: 5px 10px;
         cursor: pointer;
@@ -71,25 +70,19 @@
     <button class="reset-button">Vaciar lista</button>
     <script>
       $(document).ready(function () {
-        // Detectar cambios en las casillas de verificación
         $(".espacio").change(function () {
-          const value = $(this).val(); // Obtener el valor del checkbox
-          const lista = $("#lista-espacios"); // Seleccionar la lista
+          const value = $(this).val();
+          const lista = $("#lista-espacios");
 
           if ($(this).is(":checked")) {
-            // Añadir a la lista y deshabilitar la casilla
-            lista.append('<li data-value="' + value + '">' + value + "</li>");
+            lista.append("<li>" + value + "</li>");
             $(this).prop("disabled", true);
           }
         });
 
-        // Botón para vaciar la lista y restablecer las casillas
         $(".reset-button").click(function () {
-          // Vaciar la lista
           $("#lista-espacios").empty();
-
-          // Reiniciar los checkboxes (habilitarlos y desmarcarlos)
-          $(".espacio").prop("checked", false).prop("disabled", false);
+          $(".espacio").prop("disabled", false).prop("checked", false);
         });
       });
     </script>
