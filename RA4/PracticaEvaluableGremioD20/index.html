@@ -43,29 +43,33 @@
       <h1>Gestión de Inventario del Aventurero</h1>
       <form class="form-inventario" method="POST">
         <div class="div-form">
-          <label class="label-inventario" for="nombre">Nombre del Objeto</label>
-          <input type="text" id="nombre" name="nombre" required />
-          <br />
-          <label class="label-inventario" for="categoria">Categoría</label>
-          <select id="categoria" name="categoria">
-            <option value="Armadura">Armadura</option>
-            <option value="Poción">Poción</option>
-            <option value="Anillo">Anillo</option>
-            <option value="Bastón">Bastón</option>
-            <option value="Pergamino">Pergamino</option>
-            <option value="Foco Arcano">Foco Arcano</option>
-            <option value="Varita">Varita</option>
-            <option value="Arma">Arma</option>
-            <option value="Objeto Mágico">Objeto Mágico</option>
-          </select>
-          <br />
-          <label class="label-inventario" for="cantidad">Cantidad</label>
-          <input type="number" id="cantidad" name="cantidad" required />
-          <br />
-          <label class="label-inventario" for="precio">Precio</label>
-          <input type="number" id="precio" name="precio" required />
-          <br />
-          <button type="button" class="add">Añadir Producto</button>
+          <div>
+            <label class="label-inventario" for="nombre"
+              >Nombre del Objeto:</label
+            >
+            <input type="text" id="nombre" name="nombre" required />
+            <br />
+            <label class="label-inventario" for="categoria">Categoría:</label>
+            <select id="categoria" name="categoria">
+              <option value="Armadura">Armadura</option>
+              <option value="Poción">Poción</option>
+              <option value="Anillo">Anillo</option>
+              <option value="Bastón">Bastón</option>
+              <option value="Pergamino">Pergamino</option>
+              <option value="Foco Arcano">Foco Arcano</option>
+              <option value="Varita">Varita</option>
+              <option value="Arma">Arma</option>
+              <option value="Objeto Mágico">Objeto Mágico</option>
+            </select>
+            <br />
+            <label class="label-inventario" for="cantidad">Cantidad:</label>
+            <input type="number" id="cantidad" name="cantidad" required />
+            <br />
+            <label class="label-inventario" for="precio">Precio:</label>
+            <input type="number" id="precio" name="precio" required />
+            <br />
+          </div>
+          <button type="button" class="add">Añadir Objeto</button>
           <button type="reset" class="reset">Limpiar Formulario</button>
         </div>
       </form>
@@ -86,72 +90,72 @@
     </main>
     <script>
       $(document).ready(function () {
-        // Agregar un producto al inventario
         $(".add").click(function () {
           const nombre = $("#nombre").val();
           const categoria = $("#categoria").val();
           const cantidad = $("#cantidad").val();
           const precio = $("#precio").val();
 
+          if (!nombre || cantidad <= 0 || precio <= 0 || !categoria) {
+            alert("Por favor, completa los campos correctamente.");
+            return;
+          }
+
           const nuevaFila = `<tr>
-              <td>${nombre}</td>
-              <td>${categoria}</td>
-              <td>${cantidad}</td>
-              <td>${precio}</td>
-              <td><button class="delete">Eliminar</button></td>
-            </tr>`;
+            <td>${nombre}</td>
+            <td>${categoria}</td>
+            <td>${cantidad}</td>
+            <td>${precio}</td>
+            <td><button class="delete">Eliminar</button></td>
+          </tr>`;
 
           $("#tabla-inventario").append(nuevaFila);
 
+          // Aplicar color a la nueva fila según su categoría
+          const colores = {
+            Armadura: "#75b5d2",
+            Poción: "#7fac66",
+            Anillo: "#f0ea5d",
+            Bastón: "#f06b78",
+            Pergamino: "#e9c254",
+            "Foco Arcano": "#67e4d8",
+            Varita: "#c67cd3",
+            Arma: "#df7141",
+            "Objeto Mágico": "#839d98",
+          };
+          const color = colores[categoria];
+          $("#tabla-inventario tr:last td").css("color", color); // Aplica el color solo a la fila recien añadida
+
+          // Limpiar el formulario
           $("#nombre").val("");
           $("#categoria").val("Electrodomésticos");
           $("#cantidad").val("");
           $("#precio").val("");
         });
+      });
 
-        // Elimina un producto del inventario
-        $(document).on("click", ".delete", function () {
-          $(this).closest("tr").remove();
-        });
+      window.addEventListener("load", () => {
+        const body = document.body;
+        const modeIcon = document.getElementById("mode-icon");
 
-        // Limpia el formulario
-        $(".reset").click(function () {
-          $("form")[0].reset();
-        });
+        const theme = localStorage.getItem("theme");
+        if (theme === "light") {
+          body.classList.remove("dark-mode");
+          modeIcon.textContent = "light_mode";
+        } else {
+          body.classList.add("dark-mode");
+          modeIcon.textContent = "dark_mode";
+        }
 
-        //Color de fondo tabla dependiendo de su categoría
-        $("tbody tr").each(function () {
-          var categoria = $(this).find("td").eq(1).text();
-
-          switch (categoria) {
-            case "Armadura":
-              $(this).find("td").css("color", "#75b5d2");
-              break;
-            case "Poción":
-              $(this).find("td").css("color", "#7fac66");
-              break;
-            case "Anillo":
-              $(this).find("td").css("color", "#f0ea5d");
-              break;
-            case "Bastón":
-              $(this).find("td").css("color", "#f06b78");
-              break;
-            case "Pergamino":
-              $(this).find("td").css("color", "#e9c254");
-              break;
-            case "Foco Arcano":
-              $(this).find("td").css("color", "#67e4d8");
-              break;
-            case "Varita":
-              $(this).find("td").css("color", "#c67cd3");
-              break;
-            case "Armai":
-              $(this).find("td").css("color", "#df7141");
-              break;
-            default:
-              $(this).find("td").css("color", "#839d98");
+        document.querySelector(".mode").addEventListener("click", () => {
+          body.classList.toggle("dark-mode");
+          if (body.classList.contains("dark-mode")) {
+            modeIcon.textContent = "dark_mode";
+            localStorage.setItem("theme", "dark");
+          } else {
+            modeIcon.textContent = "light_mode";
+            localStorage.setItem("theme", "light");
           }
-          $(this).find("td").css("color", color);
         });
       });
     </script>
