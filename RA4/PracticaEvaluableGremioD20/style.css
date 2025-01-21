@@ -169,6 +169,7 @@ button:hover {
   border: 5px solid #f8f8f8;
   text-align: center;
   border-radius: 5px;
+  margin-bottom: 5%;
 }
 
 td {
@@ -203,7 +204,9 @@ body.dark-mode header {
 body.dark-mode .header-title {
   color: #a73533;
 }
-
+body.dark-mode .material-symbols-outlined {
+  color: #a73533;
+}
 body.dark-mode h1 {
   color: #1f1f1f;
 }
