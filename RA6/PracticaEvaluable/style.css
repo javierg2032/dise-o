@@ -1,0 +1,674 @@
+/*Estilos generales*/
+
+html {
+  scrollbar-color: #d4ba83 #f8f8f8;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+body {
+  background-color: #f8f8f8;
+  cursor: url("Imagenes/D20MouseClaro.png"), auto;
+  font-family: "Jacques Francoid", serif;
+  font-size: larger;
+  text-align: center;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #d4ba83;
+  padding: 40px 0px; /* Reduce el padding vertical */
+  color: #f8f8f8;
+  width: 100%;
+  height: 60px; /* Ajusta la altura */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #d4ba83;
+  padding: 40px 0px; /* Reduce el padding vertical */
+  color: #f8f8f8;
+  width: 100%;
+  height: 60px; /* Ajusta la altura */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+header .material-symbols-outlined {
+  color: #f8f8f8;
+}
+
+a {
+  text-decoration: none;
+}
+
+.logo-container {
+  flex: 1;
+  text-align: left;
+  margin-left: 2%;
+}
+
+.logo {
+  display: inline-block;
+  width: 90%;
+  max-width: 250px;
+  min-width: 80px;
+  order: 1;
+}
+
+.mode,
+.user {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-right: 20px;
+}
+
+.mode {
+  order: 2;
+}
+
+.user {
+  order: 3;
+}
+
+.logoclase {
+  width: 100px;
+  height: auto;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+  filter: drop-shadow(0px 0px 12px rgba(0, 0, 0, 0.75));
+}
+
+h1 {
+  font-family: "Jacques Francois", serif;
+  font-size: 3em;
+  margin: 0;
+  color: #f8f8f8;
+}
+
+h2 {
+  font-family: "Jacques Francois", serif;
+  font-size: 2.5em;
+  margin: 0;
+  color: #f8f8f8;
+}
+
+h3 {
+  font-family: "Jacques Francois", serif;
+  font-size: 1.75em;
+  margin: 0;
+  color: #d4ba83;
+  filter: brightness(0.3);
+}
+
+a {
+  color: #d4ba83;
+}
+
+p {
+  color: #1f1f1f;
+}
+
+main {
+  background-color: #d4ba83;
+  padding: 40px;
+  margin: 10px auto;
+  margin-top: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.8);
+  width: 90%;
+}
+
+.container {
+  display: flex;
+  /*Permite que las tarjetas se ajusten si es necesario:*/
+  flex-wrap: wrap;
+  /*Distribuye el espacio entre los elementos:*/
+  justify-content: space-evenly;
+  text-align: center;
+  width: 100%;
+  max-width: 1600px;
+  margin: 2.5% auto;
+}
+
+.card-container {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  overflow: hidden;
+  display: flex;
+  align-items: center; /* Centra verticalmente */
+  justify-content: center; /* Centra horizontalmente */
+}
+
+.card-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease-in-out, opacity 0.3s ease-in-out;
+  transform: scale(0.95);
+  z-index: 1;
+  filter: drop-shadow(0px 0px rgb(0, 0, 0));
+}
+
+#imgFull,
+#imgClasesFull {
+  opacity: 0;
+  transform: scale(0.95);
+  z-index: 0;
+}
+
+.card-container:hover > img {
+  opacity: 0;
+  z-index: 0;
+  transform: scale(0.95);
+}
+
+.card-container:hover > #imgFull,
+.card-container:hover > #imgClasesFull {
+  opacity: 1;
+  z-index: 1;
+  transform: scale(1);
+  filter: drop-shadow(0px 0px rgb(0, 0, 0));
+}
+
+/*Hover Clases*/
+
+.hover-text {
+  background-color: #f8f8f8;
+  padding-left: 5%;
+  padding-right: 5%;
+  opacity: 0;
+  scale: 0.9;
+  transform: translateY(380%);
+  transition: ease-in-out 0.75s;
+  z-index: 2;
+  color: #d4ba83;
+  border-radius: 50px;
+  font-size: 1.75em;
+  filter: none;
+  text-align: center; /* Asegura que el texto esté centrado en el h3 */
+}
+
+.index-main img:hover + .hover-text {
+  opacity: 1;
+  scale: 1;
+  z-index: 2;
+  transform: translateY(380%);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.imagenClase img {
+  width: 50%;
+  height: auto;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 0.25px;
+}
+
+th,
+td {
+  padding: 20px;
+}
+
+[id^="fila"] {
+  border: 2px solid;
+}
+
+#filaBarbaro {
+  background-color: #ea735b;
+  border-color: #d35c43;
+  color: #1f1f1f;
+}
+#filaBardo {
+  background-color: #e5a9e8;
+  border-color: #c484c7;
+  color: #1f1f1f;
+}
+#filaBrujo {
+  background-color: #fe84f1;
+  border-color: #e87bdc;
+  color: #1f1f1f;
+}
+#filaClerigo {
+  background-color: #9ebedf;
+  border-color: #699acd;
+  color: #1f1f1f;
+}
+#filaDruida {
+  background-color: #bddb63;
+  border-color: #a3ca30;
+  color: #1f1f1f;
+}
+#filaExplorador {
+  background-color: #84da71;
+  border-color: #58ad45;
+  color: #1f1f1f;
+}
+#filaGeneral {
+  background-color: #fafafa;
+  border-color: #c5c5c5;
+  color: #1f1f1f;
+}
+#filaGuerrero {
+  background-color: #f4a058;
+  border-color: #cf7221;
+  color: #1f1f1f;
+}
+#filaHechicero {
+  background-color: #e1a16d;
+  border-color: #b46322;
+  color: #1f1f1f;
+}
+#filaMago {
+  background-color: #77b2e3;
+  border-color: #287fc7;
+  color: #1f1f1f;
+}
+#filaMonje {
+  background-color: #4f91b5;
+  border-color: #325f78;
+  color: #1f1f1f;
+}
+#filaPaladin {
+  background-color: #f0c97b;
+  border-color: #cb9747;
+  color: #1f1f1f;
+}
+#filaPicaro {
+  background-color: #8d9fac;
+  border-color: #606a73;
+  color: #1f1f1f;
+}
+
+/* Modo Oscuro*/
+
+html.dark-mode a .logo {
+  content: url("Imagenes/Texto+LogoOscuro.svg");
+}
+
+html.dark-mode {
+  scrollbar-color: #a73533 #1f1f1f;
+}
+
+html.dark-mode body {
+  cursor: url("Imagenes/D20MouseOscuro.png"), auto;
+  background-color: #1f1f1f;
+}
+
+html.dark-mode a #imgClases {
+  content: url("Imagenes/ClasesOscuro.svg");
+}
+
+html.dark-mode a .imgClasesFull {
+  content: url("Imagenes/ClasesFullOscuro.svg");
+}
+
+html.dark-mode a #imgRazas {
+  content: url("Imagenes/RazasOscuro.svg");
+}
+
+html.dark-mode a .imgRazasFull {
+  content: url("Imagenes/RazasFullOscuro.svg");
+}
+
+html.dark-mode a #imgHechizos {
+  content: url("Imagenes/HechizosOscuro.svg");
+}
+
+html.dark-mode a .imgHechizosFull {
+  content: url("Imagenes/HechizosFullOscuro.svg");
+}
+
+html.dark-mode a #imgDados {
+  content: url("Imagenes/DadosOscuro.svg");
+}
+
+html.dark-mode a .imgDadosFull {
+  content: url("Imagenes/DadosFullOscuro.svg");
+}
+
+html.dark-mode a #imgPersonajes {
+  content: url("Imagenes/PersonajesOscuro.svg");
+}
+
+html.dark-mode a .imgPersonajesFull {
+  content: url("Imagenes/PersonajesFullOscuro.svg");
+}
+
+html.dark-mode {
+  background-color: #1f1f1f;
+  color: #a73533;
+}
+
+html.dark-mode header {
+  background-color: #a73533;
+  color: #1f1f1f;
+}
+
+html.dark-mode footer {
+  background-color: #a73533;
+  color: #1f1f1f;
+}
+
+html.dark-mode main {
+  background-color: #a73533;
+}
+html.dark-mode .material-symbols-outlined {
+  color: #1f1f1f;
+}
+
+html.dark-mode .hover-text {
+  background-color: #1f1f1f;
+  color: #a73533;
+}
+
+html.dark-mode #filaBarbaro {
+  background-color: #d08f75;
+  border-color: #b07a56;
+  color: #ffffff;
+}
+
+html.dark-mode #filaBardo {
+  background-color: #d69fd5;
+  border-color: #a97b9f;
+  color: #1f1f1f;
+}
+
+html.dark-mode #filaBrujo {
+  background-color: #f2a3e4;
+  border-color: #e08ac4;
+  color: #1f1f1f;
+}
+
+html.dark-mode #filaClerigo {
+  background-color: #a7b8d9;
+  border-color: #7f98c1;
+  color: #1f1f1f;
+}
+
+html.dark-mode #filaDruida {
+  background-color: #a3c370;
+  border-color: #8ca92a;
+  color: #1f1f1f;
+}
+
+html.dark-mode #filaExplorador {
+  background-color: #6dbf56;
+  border-color: #4c8e3b;
+  color: #1f1f1f;
+}
+
+html.dark-mode #filaGeneral {
+  background-color: #1f1f1f;
+  border-color: #131313;
+  color: #fafafa;
+}
+
+html.dark-mode #filaGuerrero {
+  background-color: #d68944;
+  border-color: #b56a1a;
+  color: #1f1f1f;
+}
+
+html.dark-mode #filaHechicero {
+  background-color: #c78f5a;
+  border-color: #8e4e1a;
+  color: #1f1f1f;
+}
+
+html.dark-mode #filaMago {
+  background-color: #5f94b6;
+  border-color: #21649a;
+  color: #1f1f1f;
+}
+
+html.dark-mode #filaMonje {
+  background-color: #3d7c96;
+  border-color: #2a4e63;
+  color: #1f1f1f;
+}
+
+html.dark-mode #filaPaladin {
+  background-color: #d3b36a;
+  border-color: #9e7e37;
+  color: #1f1f1f;
+}
+
+html.dark-mode #filaPicaro {
+  background-color: #7b8a97;
+  border-color: #4c555c;
+  color: #ffffff;
+}
+
+/*Media Queries*/
+@media (max-width: 400px) {
+}
+
+@media (max-width: 700px) {
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+
+  body {
+    font-size: larger;
+    text-align: center;
+  }
+
+  *,
+  *::after,
+  *::before {
+    box-sizing: border-box;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    padding: 40px 0px; /* Reduce el padding vertical */
+
+    width: 100%;
+    height: 60px; /* Ajusta la altura */
+
+    overflow: hidden;
+  }
+
+  footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 40px 0px; /* Reduce el padding vertical */
+
+    width: 100%;
+    height: 60px; /* Ajusta la altura */
+
+    overflow: hidden;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .logo-container {
+    flex: 1;
+    text-align: left;
+    margin-left: 2%;
+  }
+
+  .logo {
+    display: inline-block;
+    width: 90%;
+    max-width: 250px;
+    min-width: 80px;
+    order: 1;
+  }
+
+  .mode,
+  .user {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-right: 20px;
+  }
+
+  .mode {
+    order: 2;
+  }
+
+  .user {
+    order: 3;
+  }
+
+  .logoclase {
+    width: 100px;
+    height: auto;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+  }
+
+  h1 {
+    font-size: 3em;
+    margin: 0;
+  }
+
+  h2 {
+    font-size: 2.5em;
+    margin: 0;
+  }
+
+  h3 {
+    font-size: 1.75em;
+    margin: 0;
+  }
+
+  main {
+    background-color: #d4ba83;
+    padding: 40px;
+    margin: 10px auto;
+    margin-top: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.8);
+    width: 90%;
+  }
+
+  .container {
+    display: flex;
+    /*Permite que las tarjetas se ajusten si es necesario:*/
+    flex-wrap: wrap;
+    /*Distribuye el espacio entre los elementos:*/
+    justify-content: space-evenly;
+    text-align: center;
+    width: 100%;
+    max-width: 1600px;
+    margin: 2.5% auto;
+  }
+
+  .card-container {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    overflow: hidden;
+    display: flex;
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Centra horizontalmente */
+  }
+
+  .card-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease-in-out, opacity 0.3s ease-in-out;
+    transform: scale(0.95);
+    z-index: 1;
+    filter: drop-shadow(0px 0px rgb(0, 0, 0));
+  }
+
+  #imgFull,
+  #imgClasesFull {
+    opacity: 0;
+    transform: scale(0.95);
+    z-index: 0;
+  }
+
+  .card-container:hover > img {
+    opacity: 0;
+    z-index: 0;
+    transform: scale(0.95);
+  }
+
+  .card-container:hover > #imgFull,
+  .card-container:hover > #imgClasesFull {
+    opacity: 1;
+    z-index: 1;
+    transform: scale(1);
+    filter: drop-shadow(0px 0px rgb(0, 0, 0));
+  }
+
+  /*Hover Clases*/
+
+  .hover-text {
+    background-color: #f8f8f8;
+    padding-left: 5%;
+    padding-right: 5%;
+    opacity: 0;
+    scale: 0.9;
+    transform: translateY(380%);
+    transition: ease-in-out 0.75s;
+    z-index: 2;
+    color: #d4ba83;
+    border-radius: 50px;
+    font-size: 1.75em;
+    filter: none;
+    text-align: center; /* Asegura que el texto esté centrado en el h3 */
+  }
+
+  .index-main img:hover + .hover-text {
+    opacity: 1;
+    scale: 1;
+    z-index: 2;
+    transform: translateY(380%);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+  }
+
+  .imagenClase img {
+    width: 50%;
+    height: auto;
+  }
+}
