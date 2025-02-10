@@ -1,0 +1,107 @@
+:root {
+  --color-primary: #d4ba83; /* Color principal */
+  --color-secondary: #a73533; /* Color secundario */
+  --color-light: #f8f8f8; /* Color claro */
+  --color-dark: #1f1f1f; /* Color oscuro */
+}
+
+/* Sobrescribir colores de Bootstrap */
+.bg-primary {
+  background-color: var(--color-primary) !important;
+}
+
+.bg-secondary {
+  background-color: var(--color-secondary) !important;
+}
+
+.text-white {
+  color: var(--color-light) !important;
+}
+
+.text-dark {
+  color: var(--color-dark) !important;
+}
+
+/* Estilos personalizados */
+body {
+  font-family: "Jacques Francois", serif;
+  background-color: var(--color-light);
+  cursor: url("Imagenes/D20MouseClaro.png"), auto;
+}
+
+.dark-mode {
+  background-color: var(--color-dark);
+  color: var(--color-secondary);
+  cursor: url("Imagenes/D20MouseOscuro.png"), auto;
+}
+
+.dark-mode header,
+.dark-mode footer {
+  background-color: var(--color-secondary);
+  color: var(--color-light);
+}
+
+.dark-mode .material-symbols-outlined {
+  color: var(--color-light);
+}
+
+.dark-mode .hover-text {
+  background-color: var(--color-dark);
+  color: var(--color-secondary);
+}
+
+.card-container {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease-in-out, opacity 0.3s ease-in-out;
+  transform: scale(0.95);
+  z-index: 1;
+}
+
+.card-container:hover > img {
+  opacity: 0;
+  z-index: 0;
+  transform: scale(0.95);
+}
+
+.card-container:hover > .imgFull {
+  opacity: 1;
+  z-index: 1;
+  transform: scale(1);
+}
+
+.hover-text {
+  background-color: var(--color-light);
+  padding: 5% 10%;
+  opacity: 0;
+  scale: 0.9;
+  transform: translateY(380%);
+  transition: ease-in-out 0.75s;
+  z-index: 2;
+  color: var(--color-primary);
+  border-radius: 50px;
+  font-size: 1.75em;
+  text-align: center;
+}
+
+.card-container:hover .hover-text {
+  opacity: 1;
+  scale: 1;
+  z-index: 2;
+  transform: translateY(380%);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+}
