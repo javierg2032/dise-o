@@ -469,206 +469,99 @@ html.dark-mode #filaPicaro {
 
 /*Media Queries*/
 @media (max-width: 400px) {
-}
-
-@media (max-width: 700px) {
-  html,
-  body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-  }
-
-  body {
-    font-size: larger;
-    text-align: center;
-  }
-
-  *,
-  *::after,
-  *::before {
-    box-sizing: border-box;
-  }
-
+  /* Ajustes para el header */
   header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-
-    padding: 40px 0px; /* Reduce el padding vertical */
-
-    width: 100%;
-    height: 60px; /* Ajusta la altura */
-
-    overflow: hidden;
+    padding: 10px 0px; /* Reduce aún más el padding vertical */
+    height: 40px; /* Reduce aún más la altura */
   }
 
+  /* Ajustes para el footer */
   footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    padding: 40px 0px; /* Reduce el padding vertical */
-
-    width: 100%;
-    height: 60px; /* Ajusta la altura */
-
-    overflow: hidden;
+    padding: 10px 0px; /* Reduce aún más el padding vertical */
+    height: 40px; /* Reduce aún más la altura */
   }
 
-  a {
-    text-decoration: none;
-  }
-
-  .logo-container {
-    flex: 1;
-    text-align: left;
-    margin-left: 2%;
-  }
-
+  /* Ajustes para el logo */
   .logo {
-    display: inline-block;
-    width: 90%;
-    max-width: 250px;
-    min-width: 80px;
-    order: 1;
+    max-width: 100px; /* Reduce aún más el tamaño del logo */
   }
 
-  .mode,
-  .user {
-    padding-top: 5px;
-    padding-bottom: 5px;
-    margin-right: 20px;
+  /* Ajustes para el main */
+  main {
+    padding: 10px; /* Reduce aún más el padding */
+    width: 100%; /* Ocupa todo el ancho disponible */
   }
 
-  .mode {
-    order: 2;
+
+
+  /* Ajustes para el texto hover */
+  .hover-text {
+    font-size: 1.25em; /* Reduce aún más el tamaño de la fuente */
+    transform: translateY(250%); /* Ajusta la posición del texto */
   }
 
-  .user {
-    order: 3;
-  }
-
-  .logoclase {
-    width: 100px;
-    height: auto;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-right: 10px;
-  }
-
+  /* Ajustes para los títulos */
   h1 {
-    font-size: 3em;
-    margin: 0;
+    font-size: 2em; /* Reduce aún más el tamaño de la fuente */
   }
 
   h2 {
-    font-size: 2.5em;
-    margin: 0;
+    font-size: 1.75em; /* Reduce aún más el tamaño de la fuente */
   }
 
   h3 {
-    font-size: 1.75em;
-    margin: 0;
+    font-size: 1.25em; /* Reduce aún más el tamaño de la fuente */
   }
 
+  /* Ajustes para los iconos */
+  .mode,
+  .user {
+    margin-right: 10px; /* Reduce el margen derecho */
+  }
+}
+
+@media (max-width: 700px) {
+  /* Ajustes para el header */
+  header {
+    padding: 20px 0px; /* Reduce el padding vertical */
+    height: 50px; /* Reduce la altura */
+  }
+
+  /* Ajustes para el footer */
+  footer {
+    padding: 20px 0px; /* Reduce el padding vertical */
+    height: 50px; /* Reduce la altura */
+  }
+
+  /* Ajustes para el logo */
+  .logo {
+    max-width: 150px; /* Reduce el tamaño del logo */
+  }
+
+  /* Ajustes para el main */
   main {
-    background-color: #d4ba83;
-    padding: 40px;
-    margin: 10px auto;
-    margin-top: 10px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.8);
-    width: 90%;
+    padding: 20px; /* Reduce el padding */
+    width: 95%; /* Aumenta el ancho para aprovechar más espacio */
   }
 
-  .container {
-    display: flex;
-    /*Permite que las tarjetas se ajusten si es necesario:*/
-    flex-wrap: wrap;
-    /*Distribuye el espacio entre los elementos:*/
-    justify-content: space-evenly;
-    text-align: center;
-    width: 100%;
-    max-width: 1600px;
-    margin: 2.5% auto;
-  }
 
-  .card-container {
-    position: relative;
-    width: 300px;
-    height: 400px;
-    overflow: hidden;
-    display: flex;
-    align-items: center; /* Centra verticalmente */
-    justify-content: center; /* Centra horizontalmente */
-  }
 
-  .card-container img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease-in-out, opacity 0.3s ease-in-out;
-    transform: scale(0.95);
-    z-index: 1;
-    filter: drop-shadow(0px 0px rgb(0, 0, 0));
-  }
-
-  #imgFull,
-  #imgClasesFull {
-    opacity: 0;
-    transform: scale(0.95);
-    z-index: 0;
-  }
-
-  .card-container:hover > img {
-    opacity: 0;
-    z-index: 0;
-    transform: scale(0.95);
-  }
-
-  .card-container:hover > #imgFull,
-  .card-container:hover > #imgClasesFull {
-    opacity: 1;
-    z-index: 1;
-    transform: scale(1);
-    filter: drop-shadow(0px 0px rgb(0, 0, 0));
-  }
-
-  /*Hover Clases*/
-
+  /* Ajustes para el texto hover */
   .hover-text {
-    background-color: #f8f8f8;
-    padding-left: 5%;
-    padding-right: 5%;
-    opacity: 0;
-    scale: 0.9;
-    transform: translateY(380%);
-    transition: ease-in-out 0.75s;
-    z-index: 2;
-    color: #d4ba83;
-    border-radius: 50px;
-    font-size: 1.75em;
-    filter: none;
-    text-align: center; /* Asegura que el texto esté centrado en el h3 */
+    font-size: 1.5em; /* Reduce el tamaño de la fuente */
+    transform: translateY(300%); /* Ajusta la posición del texto */
   }
 
-  .index-main img:hover + .hover-text {
-    opacity: 1;
-    scale: 1;
-    z-index: 2;
-    transform: translateY(380%);
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+  /* Ajustes para los títulos */
+  h1 {
+    font-size: 2.5em; /* Reduce el tamaño de la fuente */
   }
 
-  .imagenClase img {
-    width: 50%;
-    height: auto;
+  h2 {
+    font-size: 2em; /* Reduce el tamaño de la fuente */
+  }
+
+  h3 {
+    font-size: 1.5em; /* Reduce el tamaño de la fuente */
   }
 }
