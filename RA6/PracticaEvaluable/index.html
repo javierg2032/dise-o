@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="keywords" content="D&D, DND, Dungeons and Dragons, Rol" />
     <title>Gremio D20</title>
-    <link rel="shortcut icon" id="favicon" href="Imagenes/D20Claro.svg" />
+    <link rel="shortcut icon" id="favicon" href="../Imagenes/D20Claro.svg" />
     <link
       href="https://fonts.googleapis.com/css2?family=Jacques+Francois&display=swap"
       rel="stylesheet"
@@ -20,84 +20,80 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="Estilos/styleBootstrap.css" />
+    <link
+      rel="stylesheet"
+      href="../PracticaEvaluable/Estilos/styleBootstrap.css"
+    />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <style></style>
   </head>
-
   <body>
     <header
-      class="bg-primary text-white p-3 d-flex justify-content-between align-items-center sticky-top shadow"
+      class="p-3 d-flex justify-content-between align-items-center sticky-top shadow"
     >
       <div class="logo-container">
         <a href="index.html">
-          <img
-            src="Imagenes/Texto+Logo.svg"
-            alt="Logo"
-            class="logo"
-            style="max-width: 250px; min-width: 80px"
-          />
+          <img src="Imagenes/Texto+Logo.svg" alt="Logo" class="logo" />
         </a>
       </div>
       <div class="d-flex align-items-center">
-        <div class="user me-3">
-          <span class="material-symbols-outlined">account_circle</span>
+        <div class="user me-3" id="user-toggle">
+          <a href="login.html">
+            <span class="material-symbols-outlined" id="user-icon"
+              >account_circle</span
+            >
+          </a>
         </div>
-        <div class="mode">
+        <div class="mode" id="mode-toggle">
           <span class="material-symbols-outlined" id="mode-icon"
             >light_mode</span
           >
         </div>
       </div>
     </header>
-
-    <main class="container-fluid p-4 bg-primary rounded shadow my-4">
+    <main class="index-main container-fluidp-4 rounded shadow my-4">
       <div class="row justify-content-evenly">
-        <div class="col-md-3 mb-4">
+        <div class="container col-md-3 mb-4">
           <a href="Clases.html">
             <div class="card-container">
               <img src="Imagenes/Clases.svg" alt="Clases" id="imgClases" />
               <img
                 src="Imagenes/ClasesFull.svg"
                 alt="ClasesFull"
-                class="imgFull"
+                class="imgClasesFull"
+                id="imgFull"
               />
-              <h3 class="hover-text">Clases</h3>
+              <h3 class="hover-text" id="clasesIndex">Clases</h3>
             </div>
           </a>
-        </div>
-        <div class="col-md-3 mb-4">
-          <a href="#">
+
+          <a href="">
             <div class="card-container">
               <img src="Imagenes/Razas.svg" alt="Razas" id="imgRazas" />
               <img
                 src="Imagenes/RazasFull.svg"
                 alt="RazasFull"
-                class="imgFull"
+                class="imgRazasFull"
+                id="imgFull"
               />
-              <h3 class="hover-text">Razas</h3>
+              <h3 class="hover-text" id="razasIndex">Razas</h3>
             </div>
           </a>
-        </div>
-        <div class="col-md-3 mb-4">
-          <a href="#">
+          <a href="">
             <div class="card-container">
               <img src="Imagenes/Dados.svg" alt="Dados" id="imgDados" />
               <img
                 src="Imagenes/DadosFull.svg"
                 alt="DadosFull"
-                class="imgFull"
+                class="imgDadosFull"
+                id="imgFull"
               />
-              <h3 class="hover-text">Dados</h3>
+              <h3 class="hover-text" id="dadosIndex">Dados</h3>
             </div>
           </a>
-        </div>
-      </div>
-      <div class="row justify-content-center">
-        <div class="col-md-3 mb-4">
-          <a href="#">
+
+          <a href="">
             <div class="card-container">
               <img
                 src="Imagenes/Personajes.svg"
@@ -107,24 +103,20 @@
               <img
                 src="Imagenes/PersonajesFull.svg"
                 alt="PersonajesFull"
-                class="imgFull"
+                class="imgPersonajesFull"
+                id="imgFull"
               />
-              <h3 class="hover-text">Personajes</h3>
+              <h3 class="hover-text" id="personajesIndex">Personajes</h3>
             </div>
           </a>
         </div>
       </div>
     </main>
-
-    <footer class="bg-primary text-white p-3 text-center shadow">
-      <p>© 2023 Gremio D20</p>
-    </footer>
-
+    <footer></footer>
     <script>
       window.addEventListener("load", () => {
         const html = document.documentElement;
         const modeIcon = document.getElementById("mode-icon");
-
         const theme = localStorage.getItem("theme");
         if (theme === "light") {
           html.classList.remove("dark-mode");
@@ -133,7 +125,6 @@
           html.classList.add("dark-mode");
           modeIcon.textContent = "dark_mode";
         }
-
         document.querySelector(".mode").addEventListener("click", () => {
           html.classList.toggle("dark-mode");
           if (html.classList.contains("dark-mode")) {

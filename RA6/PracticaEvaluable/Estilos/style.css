@@ -13,7 +13,7 @@ body {
 
 body {
   background-color: #f8f8f8;
-  cursor: url("Imagenes/D20MouseClaro.png"), auto;
+  cursor: url("../Imagenes/D20Claro.svg"), auto;
   font-family: "Jacques Francoid", serif;
   font-size: larger;
   text-align: center;
@@ -227,90 +227,10 @@ main {
   height: auto;
 }
 
-table {
-  border-collapse: separate;
-  border-spacing: 0.25px;
-}
-
-th,
-td {
-  padding: 20px;
-}
-
-[id^="fila"] {
-  border: 2px solid;
-}
-
-#filaBarbaro {
-  background-color: #ea735b;
-  border-color: #d35c43;
-  color: #1f1f1f;
-}
-#filaBardo {
-  background-color: #e5a9e8;
-  border-color: #c484c7;
-  color: #1f1f1f;
-}
-#filaBrujo {
-  background-color: #fe84f1;
-  border-color: #e87bdc;
-  color: #1f1f1f;
-}
-#filaClerigo {
-  background-color: #9ebedf;
-  border-color: #699acd;
-  color: #1f1f1f;
-}
-#filaDruida {
-  background-color: #bddb63;
-  border-color: #a3ca30;
-  color: #1f1f1f;
-}
-#filaExplorador {
-  background-color: #84da71;
-  border-color: #58ad45;
-  color: #1f1f1f;
-}
-#filaGeneral {
-  background-color: #fafafa;
-  border-color: #c5c5c5;
-  color: #1f1f1f;
-}
-#filaGuerrero {
-  background-color: #f4a058;
-  border-color: #cf7221;
-  color: #1f1f1f;
-}
-#filaHechicero {
-  background-color: #e1a16d;
-  border-color: #b46322;
-  color: #1f1f1f;
-}
-#filaMago {
-  background-color: #77b2e3;
-  border-color: #287fc7;
-  color: #1f1f1f;
-}
-#filaMonje {
-  background-color: #4f91b5;
-  border-color: #325f78;
-  color: #1f1f1f;
-}
-#filaPaladin {
-  background-color: #f0c97b;
-  border-color: #cb9747;
-  color: #1f1f1f;
-}
-#filaPicaro {
-  background-color: #8d9fac;
-  border-color: #606a73;
-  color: #1f1f1f;
-}
-
 /* Modo Oscuro*/
 
 html.dark-mode a .logo {
-  content: url("Imagenes/Texto+LogoOscuro.svg");
+  content: url("../Imagenes/Texto+LogoOscuro.svg");
 }
 
 html.dark-mode {
@@ -318,48 +238,48 @@ html.dark-mode {
 }
 
 html.dark-mode body {
-  cursor: url("Imagenes/D20MouseOscuro.png"), auto;
+  cursor: url("../Imagenes/D20MouseOscuro.png"), auto;
   background-color: #1f1f1f;
 }
 
 html.dark-mode a #imgClases {
-  content: url("Imagenes/ClasesOscuro.svg");
+  content: url("../Imagenes/ClasesOscuro.svg");
 }
 
 html.dark-mode a .imgClasesFull {
-  content: url("Imagenes/ClasesFullOscuro.svg");
+  content: url("../Imagenes/ClasesFullOscuro.svg");
 }
 
 html.dark-mode a #imgRazas {
-  content: url("Imagenes/RazasOscuro.svg");
+  content: url("../Imagenes/RazasOscuro.svg");
 }
 
 html.dark-mode a .imgRazasFull {
-  content: url("Imagenes/RazasFullOscuro.svg");
+  content: url("../Imagenes/RazasFullOscuro.svg");
 }
 
 html.dark-mode a #imgHechizos {
-  content: url("Imagenes/HechizosOscuro.svg");
+  content: url("../Imagenes/HechizosOscuro.svg");
 }
 
 html.dark-mode a .imgHechizosFull {
-  content: url("Imagenes/HechizosFullOscuro.svg");
+  content: url("../Imagenes/HechizosFullOscuro.svg");
 }
 
 html.dark-mode a #imgDados {
-  content: url("Imagenes/DadosOscuro.svg");
+  content: url("../Imagenes/DadosOscuro.svg");
 }
 
 html.dark-mode a .imgDadosFull {
-  content: url("Imagenes/DadosFullOscuro.svg");
+  content: url("../Imagenes/DadosFullOscuro.svg");
 }
 
 html.dark-mode a #imgPersonajes {
-  content: url("Imagenes/PersonajesOscuro.svg");
+  content: url("../Imagenes/PersonajesOscuro.svg");
 }
 
 html.dark-mode a .imgPersonajesFull {
-  content: url("Imagenes/PersonajesFullOscuro.svg");
+  content: url("../Imagenes/PersonajesFullOscuro.svg");
 }
 
 html.dark-mode {
@@ -389,137 +309,7 @@ html.dark-mode .hover-text {
   color: #a73533;
 }
 
-html.dark-mode #filaBarbaro {
-  background-color: #d08f75;
-  border-color: #b07a56;
-  color: #ffffff;
-}
-
-html.dark-mode #filaBardo {
-  background-color: #d69fd5;
-  border-color: #a97b9f;
-  color: #1f1f1f;
-}
-
-html.dark-mode #filaBrujo {
-  background-color: #f2a3e4;
-  border-color: #e08ac4;
-  color: #1f1f1f;
-}
-
-html.dark-mode #filaClerigo {
-  background-color: #a7b8d9;
-  border-color: #7f98c1;
-  color: #1f1f1f;
-}
-
-html.dark-mode #filaDruida {
-  background-color: #a3c370;
-  border-color: #8ca92a;
-  color: #1f1f1f;
-}
-
-html.dark-mode #filaExplorador {
-  background-color: #6dbf56;
-  border-color: #4c8e3b;
-  color: #1f1f1f;
-}
-
-html.dark-mode #filaGeneral {
-  background-color: #1f1f1f;
-  border-color: #131313;
-  color: #fafafa;
-}
-
-html.dark-mode #filaGuerrero {
-  background-color: #d68944;
-  border-color: #b56a1a;
-  color: #1f1f1f;
-}
-
-html.dark-mode #filaHechicero {
-  background-color: #c78f5a;
-  border-color: #8e4e1a;
-  color: #1f1f1f;
-}
-
-html.dark-mode #filaMago {
-  background-color: #5f94b6;
-  border-color: #21649a;
-  color: #1f1f1f;
-}
-
-html.dark-mode #filaMonje {
-  background-color: #3d7c96;
-  border-color: #2a4e63;
-  color: #1f1f1f;
-}
-
-html.dark-mode #filaPaladin {
-  background-color: #d3b36a;
-  border-color: #9e7e37;
-  color: #1f1f1f;
-}
-
-html.dark-mode #filaPicaro {
-  background-color: #7b8a97;
-  border-color: #4c555c;
-  color: #ffffff;
-}
-
 /*Media Queries*/
-@media (max-width: 400px) {
-  /* Ajustes para el header */
-  header {
-    padding: 10px 0px; /* Reduce aún más el padding vertical */
-    height: 40px; /* Reduce aún más la altura */
-  }
-
-  /* Ajustes para el footer */
-  footer {
-    padding: 10px 0px; /* Reduce aún más el padding vertical */
-    height: 40px; /* Reduce aún más la altura */
-  }
-
-  /* Ajustes para el logo */
-  .logo {
-    max-width: 100px; /* Reduce aún más el tamaño del logo */
-  }
-
-  /* Ajustes para el main */
-  main {
-    padding: 10px; /* Reduce aún más el padding */
-    width: 100%; /* Ocupa todo el ancho disponible */
-  }
-
-
-
-  /* Ajustes para el texto hover */
-  .hover-text {
-    font-size: 1.25em; /* Reduce aún más el tamaño de la fuente */
-    transform: translateY(250%); /* Ajusta la posición del texto */
-  }
-
-  /* Ajustes para los títulos */
-  h1 {
-    font-size: 2em; /* Reduce aún más el tamaño de la fuente */
-  }
-
-  h2 {
-    font-size: 1.75em; /* Reduce aún más el tamaño de la fuente */
-  }
-
-  h3 {
-    font-size: 1.25em; /* Reduce aún más el tamaño de la fuente */
-  }
-
-  /* Ajustes para los iconos */
-  .mode,
-  .user {
-    margin-right: 10px; /* Reduce el margen derecho */
-  }
-}
-
 @media (max-width: 700px) {
   /* Ajustes para el header */
   header {
@@ -544,7 +334,11 @@ html.dark-mode #filaPicaro {
     width: 95%; /* Aumenta el ancho para aprovechar más espacio */
   }
 
-
+  .container {
+    width: 90%;
+    max-width: 700px;
+    margin: 1.5% auto;
+  }
 
   /* Ajustes para el texto hover */
   .hover-text {
@@ -563,5 +357,55 @@ html.dark-mode #filaPicaro {
 
   h3 {
     font-size: 1.5em; /* Reduce el tamaño de la fuente */
+  }
+}
+
+@media (max-width: 400px) {
+  /* Ajustes para el header */
+  header {
+    padding: 10px 0px; /* Reduce aún más el padding vertical */
+    height: 40px; /* Reduce aún más la altura */
+  }
+
+  /* Ajustes para el footer */
+  footer {
+    padding: 10px 0px; /* Reduce aún más el padding vertical */
+    height: 40px; /* Reduce aún más la altura */
+  }
+
+  /* Ajustes para el logo */
+  .logo {
+    max-width: 100px; /* Reduce aún más el tamaño del logo */
+  }
+
+  /* Ajustes para el main */
+  main {
+    padding: 10px; /* Reduce aún más el padding */
+    width: 100%; /* Ocupa todo el ancho disponible */
+  }
+
+  /* Ajustes para el texto hover */
+  .hover-text {
+    font-size: 1.25em; /* Reduce aún más el tamaño de la fuente */
+    transform: translateY(250%); /* Ajusta la posición del texto */
+  }
+
+  /* Ajustes para los títulos */
+  h1 {
+    font-size: 2em; /* Reduce aún más el tamaño de la fuente */
+  }
+
+  h2 {
+    font-size: 1.75em; /* Reduce aún más el tamaño de la fuente */
+  }
+
+  h3 {
+    font-size: 1.25em; /* Reduce aún más el tamaño de la fuente */
+  }
+
+  /* Ajustes para los iconos */
+  .mode,
+  .user {
+    margin-right: 10px; /* Reduce el margen derecho */
   }
 }

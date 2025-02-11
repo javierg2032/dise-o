@@ -1,53 +1,155 @@
-:root {
-  --color-primary: #d4ba83; /* Color principal */
-  --color-secondary: #a73533; /* Color secundario */
-  --color-light: #f8f8f8; /* Color claro */
-  --color-dark: #1f1f1f; /* Color oscuro */
+/*Estilos generales*/
+
+html {
+  scrollbar-color: #d4ba83 #f8f8f8;
 }
 
-/* Sobrescribir colores de Bootstrap */
-.bg-primary {
-  background-color: var(--color-primary) !important;
-}
-
-.bg-secondary {
-  background-color: var(--color-secondary) !important;
-}
-
-.text-white {
-  color: var(--color-light) !important;
-}
-
-.text-dark {
-  color: var(--color-dark) !important;
-}
-
-/* Estilos personalizados */
+html,
 body {
-  font-family: "Jacques Francois", serif;
-  background-color: var(--color-light);
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+body {
+  background-color: #f8f8f8;
   cursor: url("Imagenes/D20MouseClaro.png"), auto;
+  font-family: "Jacques Francoid", serif;
+  font-size: larger;
+  text-align: center;
 }
 
-.dark-mode {
-  background-color: var(--color-dark);
-  color: var(--color-secondary);
-  cursor: url("Imagenes/D20MouseOscuro.png"), auto;
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
 }
 
-.dark-mode header,
-.dark-mode footer {
-  background-color: var(--color-secondary);
-  color: var(--color-light);
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #d4ba83;
+  padding: 40px 0px; /* Reduce el padding vertical */
+  color: #f8f8f8;
+  width: 100%;
+  height: 60px; /* Ajusta la altura */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
 }
 
-.dark-mode .material-symbols-outlined {
-  color: var(--color-light);
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #d4ba83;
+  padding: 40px 0px; /* Reduce el padding vertical */
+  color: #f8f8f8;
+  width: 100%;
+  height: 60px; /* Ajusta la altura */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
 }
 
-.dark-mode .hover-text {
-  background-color: var(--color-dark);
-  color: var(--color-secondary);
+header .material-symbols-outlined {
+  color: #f8f8f8;
+}
+
+a {
+  text-decoration: none;
+}
+
+.logo-container {
+  flex: 1;
+  text-align: left;
+  margin-left: 2%;
+}
+
+.logo {
+  display: inline-block;
+  width: 90%;
+  max-width: 200px;
+  min-width: 80px;
+  order: 1;
+}
+
+.mode,
+.user {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-right: 20px;
+}
+
+.mode {
+  order: 2;
+}
+
+.user {
+  order: 3;
+}
+
+.logoclase {
+  width: 100px;
+  height: auto;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+  filter: drop-shadow(0px 0px 12px rgba(0, 0, 0, 0.75));
+}
+
+h1 {
+  font-family: "Jacques Francois", serif;
+  font-size: 3em;
+  margin: 0;
+  color: #f8f8f8;
+}
+
+h2 {
+  font-family: "Jacques Francois", serif;
+  font-size: 2.5em;
+  margin: 0;
+  color: #f8f8f8;
+}
+
+h3 {
+  font-family: "Jacques Francois", serif;
+  font-size: 1.75em;
+  margin: 0;
+  color: #d4ba83;
+  filter: brightness(0.3);
+}
+
+a {
+  color: #d4ba83;
+}
+
+p {
+  color: #1f1f1f;
+}
+
+main {
+  background-color: #d4ba83;
+  padding: 40px;
+  margin: 10px auto;
+  margin-top: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.8);
+  width: 90%;
+}
+
+.container {
+  display: flex;
+  /*Permite que las tarjetas se ajusten si es necesario:*/
+  flex-wrap: wrap;
+  /*Distribuye el espacio entre los elementos:*/
+  justify-content: space-evenly;
+  text-align: center;
+  width: 100%;
+  max-width: 1600px;
+  margin: 2.5% auto;
 }
 
 .card-container {
@@ -56,8 +158,8 @@ body {
   height: 400px;
   overflow: hidden;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: center; /* Centra verticalmente */
+  justify-content: center; /* Centra horizontalmente */
 }
 
 .card-container img {
@@ -70,6 +172,14 @@ body {
   transition: transform 0.5s ease-in-out, opacity 0.3s ease-in-out;
   transform: scale(0.95);
   z-index: 1;
+  filter: drop-shadow(0px 0px rgb(0, 0, 0));
+}
+
+#imgFull,
+#imgClasesFull {
+  opacity: 0;
+  transform: scale(0.95);
+  z-index: 0;
 }
 
 .card-container:hover > img {
@@ -78,30 +188,123 @@ body {
   transform: scale(0.95);
 }
 
-.card-container:hover > .imgFull {
+.card-container:hover > #imgFull,
+.card-container:hover > #imgClasesFull {
   opacity: 1;
   z-index: 1;
   transform: scale(1);
+  filter: drop-shadow(0px 0px rgb(0, 0, 0));
 }
 
+/*Hover Clases*/
+
 .hover-text {
-  background-color: var(--color-light);
-  padding: 5% 10%;
+  background-color: #f8f8f8;
+  padding-left: 5%;
+  padding-right: 5%;
   opacity: 0;
   scale: 0.9;
   transform: translateY(380%);
   transition: ease-in-out 0.75s;
   z-index: 2;
-  color: var(--color-primary);
+  color: #d4ba83;
   border-radius: 50px;
   font-size: 1.75em;
-  text-align: center;
+  filter: none;
+  text-align: center; /* Asegura que el texto esté centrado en el h3 */
 }
 
-.card-container:hover .hover-text {
+.index-main img:hover + .hover-text {
   opacity: 1;
   scale: 1;
   z-index: 2;
   transform: translateY(380%);
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.imagenClase img {
+  width: 50%;
+  height: auto;
+}
+
+/* Modo Oscuro*/
+
+html.dark-mode a .logo {
+  content: url("../Imagenes/Texto+LogoOscuro.svg");
+}
+
+html.dark-mode {
+  scrollbar-color: #a73533 #1f1f1f;
+}
+
+html.dark-mode body {
+  cursor: url("../Imagenes/D20MouseOscuro.png"), auto;
+  background-color: #1f1f1f;
+}
+
+html.dark-mode a #imgClases {
+  content: url("../Imagenes/ClasesOscuro.svg");
+}
+
+html.dark-mode a .imgClasesFull {
+  content: url("../Imagenes/ClasesFullOscuro.svg");
+}
+
+html.dark-mode a #imgRazas {
+  content: url("../Imagenes/RazasOscuro.svg");
+}
+
+html.dark-mode a .imgRazasFull {
+  content: url("../Imagenes/RazasFullOscuro.svg");
+}
+
+html.dark-mode a #imgHechizos {
+  content: url("../Imagenes/HechizosOscuro.svg");
+}
+
+html.dark-mode a .imgHechizosFull {
+  content: url("../Imagenes/HechizosFullOscuro.svg");
+}
+
+html.dark-mode a #imgDados {
+  content: url("../Imagenes/DadosOscuro.svg");
+}
+
+html.dark-mode a .imgDadosFull {
+  content: url("../Imagenes/DadosFullOscuro.svg");
+}
+
+html.dark-mode a #imgPersonajes {
+  content: url("../Imagenes/PersonajesOscuro.svg");
+}
+
+html.dark-mode a .imgPersonajesFull {
+  content: url("../Imagenes/PersonajesFullOscuro.svg");
+}
+
+html.dark-mode {
+  background-color: #1f1f1f;
+  color: #a73533;
+}
+
+html.dark-mode header {
+  background-color: #a73533;
+  color: #1f1f1f;
+}
+
+html.dark-mode footer {
+  background-color: #a73533;
+  color: #1f1f1f;
+}
+
+html.dark-mode main {
+  background-color: #a73533;
+}
+html.dark-mode .material-symbols-outlined {
+  color: #1f1f1f;
+}
+
+html.dark-mode .hover-text {
+  background-color: #1f1f1f;
+  color: #a73533;
 }
