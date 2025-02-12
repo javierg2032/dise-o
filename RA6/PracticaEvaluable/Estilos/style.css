@@ -311,27 +311,27 @@ html.dark-mode .hover-text {
 
 /*Media Queries*/
 @media (max-width: 700px) {
-  /* Ajustes para el header */
+  
   header {
-    padding: 20px 0px; /* Reduce el padding vertical */
-    height: 50px; /* Reduce la altura */
+    padding: 20px 0px; 
+    height: 50px; 
   }
 
-  /* Ajustes para el footer */
+
   footer {
-    padding: 20px 0px; /* Reduce el padding vertical */
-    height: 50px; /* Reduce la altura */
+    padding: 20px 0px; 
+    height: 50px; 
   }
 
-  /* Ajustes para el logo */
+  
   .logo {
-    max-width: 150px; /* Reduce el tamaño del logo */
+    max-width: 150px; 
   }
 
-  /* Ajustes para el main */
+  
   main {
-    padding: 20px; /* Reduce el padding */
-    width: 95%; /* Aumenta el ancho para aprovechar más espacio */
+    padding: 20px; 
+    width: 95%;
   }
 
   .container {
@@ -340,72 +340,72 @@ html.dark-mode .hover-text {
     margin: 1.5% auto;
   }
 
-  /* Ajustes para el texto hover */
+  
   .hover-text {
-    font-size: 1.5em; /* Reduce el tamaño de la fuente */
-    transform: translateY(300%); /* Ajusta la posición del texto */
+    font-size: 1.5em; 
+    transform: translateY(300%);
   }
 
-  /* Ajustes para los títulos */
+  
   h1 {
-    font-size: 2.5em; /* Reduce el tamaño de la fuente */
+    font-size: 2.5em; 
   }
 
   h2 {
-    font-size: 2em; /* Reduce el tamaño de la fuente */
+    font-size: 2em; 
   }
 
   h3 {
-    font-size: 1.5em; /* Reduce el tamaño de la fuente */
+    font-size: 1.5em; 
   }
 }
 
 @media (max-width: 400px) {
-  /* Ajustes para el header */
+  
   header {
-    padding: 10px 0px; /* Reduce aún más el padding vertical */
-    height: 40px; /* Reduce aún más la altura */
+    padding: 10px 0px; 
+    height: 40px; 
   }
 
-  /* Ajustes para el footer */
+  
   footer {
-    padding: 10px 0px; /* Reduce aún más el padding vertical */
-    height: 40px; /* Reduce aún más la altura */
+    padding: 10px 0px; 
+    height: 40px; 
   }
 
-  /* Ajustes para el logo */
+  
   .logo {
-    max-width: 100px; /* Reduce aún más el tamaño del logo */
+    max-width: 100px;
   }
 
-  /* Ajustes para el main */
+  
   main {
-    padding: 10px; /* Reduce aún más el padding */
-    width: 100%; /* Ocupa todo el ancho disponible */
+    padding: 10px; 
+    width: 100%; 
   }
 
-  /* Ajustes para el texto hover */
+  
   .hover-text {
-    font-size: 1.25em; /* Reduce aún más el tamaño de la fuente */
-    transform: translateY(250%); /* Ajusta la posición del texto */
+    font-size: 1.25em; 
+    transform: translateY(250%); 
   }
 
-  /* Ajustes para los títulos */
+  
   h1 {
-    font-size: 2em; /* Reduce aún más el tamaño de la fuente */
+    font-size: 2em;
   }
 
   h2 {
-    font-size: 1.75em; /* Reduce aún más el tamaño de la fuente */
+    font-size: 1.75em; 
   }
 
   h3 {
-    font-size: 1.25em; /* Reduce aún más el tamaño de la fuente */
+    font-size: 1.25em;
   }
 
-  /* Ajustes para los iconos */
+  
   .mode,
   .user {
-    margin-right: 10px; /* Reduce el margen derecho */
+    margin-right: 10px;
   }
 }
